@@ -6,119 +6,26 @@
   <title>The Jaki Gonzalez Spirit of Excellence Scholarship</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fdf7f3;
-      color: #444;
-    }
+    .section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  gap: 1.5rem;
+}
 
-    nav {
-      background: linear-gradient(135deg, #f9c5d1, #fbc2eb);
-      padding: 1rem 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+.section img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1 1 30%;
+}
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #6b4c8f;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      background: linear-gradient(135deg, #f9c5d1 0%, #fbc2eb 50%);
-      padding: 4.0rem 1rem 3rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.2rem;
-      margin: 0;
-      color: #2c2c2c;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-
-    .mission-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-    }
-
-    .mission-text {
-      flex: 1 1 50%;
-      text-align: left;
-    }
-
-    .mission-text h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #6b4c8f;
-      margin-bottom: 1rem;
-    }
-
-    .mission-text p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .donate-button {
-      display: inline-block;
-      background-color: #a78bfa;
-      color: white;
-      font-weight: 600;
-      padding: 0.8rem 1.6rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin-top: 1.5rem;
-      transition: background-color 0.3s ease;
-    }
-
-    .donate-button:hover {
-      background-color: #7c3aed;
-    }
-
-    .mission-image {
-      flex: 1 1 40%;
-    }
-
-    .mission-image img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .hero-images {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .hero-images img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.section .text {
+  flex: 1 1 60%;
+}
 
     footer {
       background-color: #f3e8ff;
