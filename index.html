@@ -11,56 +11,57 @@
       font-family: 'Open Sans', sans-serif;
       background-color: #fdf7f3;
       color: #444;
-      line-height: 1.7;
     }
 
     header {
       background: linear-gradient(135deg, #f9c5d1, #fbc2eb);
-      color: #2c2c2c;
-      padding: 2.5rem 1rem;
+      padding: 2.5rem 1rem 1rem;
       text-align: center;
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
+      color: #2c2c2c;
+    }
+
+    nav {
+      background-color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #6b4c8f;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     main {
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1.5rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
+      text-align: center;
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
       color: #6b4c8f;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .image-grid img {
-      width: 100%;
-      border-radius: 10px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .image-grid img:hover {
-      transform: scale(1.02);
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     .donate-button {
@@ -71,7 +72,7 @@
       padding: 0.8rem 1.6rem;
       border-radius: 6px;
       text-decoration: none;
-      margin-top: 1.2rem;
+      margin-top: 1.5rem;
       transition: background-color 0.3s ease;
     }
 
@@ -79,8 +80,20 @@
       background-color: #7c3aed;
     }
 
-    ul {
-      padding-left: 1.2rem;
+    .hero-images {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .hero-images img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -89,50 +102,39 @@
       text-align: center;
       font-size: 0.9rem;
       color: #6c4b6b;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Jaki Gonzalez Spirit of Excellence Scholarship</h1>
-    <p>Honoring excellence, resilience, and service in memory of Jaki</p>
   </header>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="meet-jaki.html">Meet Jaki</a>
+    <a href="committee.html">Award Recipients</a>
+    <a href="recipients.html">Meet the Committee</a>
+  </nav>
+
   <main>
-    <section>
-      <h2>Our Mission</h2>
-      <p>
-        The Jaki Gonzalez Spirit of Excellence Scholarship celebrates the memory of Jaki Gonzalez '21 by supporting outstanding students who exemplify excellence, resilience, and a commitment to service. Through this fund, we aim to honor her legacy and empower future changemakers.
-      </p>
-      <a href="#" class="donate-button">Donate to Support Our Mission</a>
-    </section>
+    <h2>Our Mission</h2>
+    <p>
+      The Jaki Gonzalez Spirit of Excellence Scholarship celebrates the memory of Jaki Gonzalez '21 by supporting outstanding students who exemplify excellence, resilience, and a commitment to service. Through this fund, we aim to honor her legacy and empower future changemakers.
+    </p>
+    <a href="#" class="donate-button">Donate to Support Our Mission</a>
 
-    <section>
-      <h2>Photos of Jaki</h2>
-      <div class="image-grid">
-        <img src="images/basketball.jpg" alt="Jaki with her middle school basketball team">
-        <img src="images/fullgrad.jpg" alt="Jaki on graduation day">
-        <img src="images/princetonacceptance.jpg" alt="Jaki holding her Princeton acceptance">
-        <!-- Add more photos as needed -->
-      </div>
-    </section>
-
-    <section>
-      <h2>Meet the Committee</h2>
-      <p>
-        Our scholarship committee is composed of Jaki’s family and classmates who are committed to upholding her legacy. We work together to select recipients and ensure the scholarship creates lasting impact.
-      </p>
-      <ul>
-        <li>Joelle McMillan – Founder</li>
-        <li>Melany Avila – Committee Member</li>
-        <li>Kerrigan Kotecki – Committee Member</li>
-        <!-- Add more as needed -->
-      </ul>
-    </section>
+    <div class="hero-images">
+      <img src="images/fullgrad.jpg" alt="Jaki on Graduation Day">
+      <img src="images/basketball.jpg" alt="Jaki's Basketball Team">
+    </div>
   </main>
 
   <footer>
     &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
   </footer>
+
 </body>
 </html>
