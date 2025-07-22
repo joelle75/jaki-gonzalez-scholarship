@@ -3,106 +3,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Jaki Gonzalez Spirit of Excellence Scholarship</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Meet Jaki - The Jaki Gonzalez Spirit of Excellence Scholarship</title>
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fdf7f3;
+      font-family: 'Helvetica', sans-serif;
+      background-color: #fff8f9; /* Soft pink-tinted background */
       color: #444;
     }
 
+    /* Navigation Styles */
     nav {
       background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 0.5rem 1rem;
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    nav a {
-     margin: 0 1rem;
-    text-decoration: none;
-    color: #c2185b; /* Darker pink */
-    font-weight: 600;
-    font-size: 1rem;
+    .menu-btn {
+      background: none;
+      border: none;
+      color: #c2185b;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
     }
 
-    nav a:hover {
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      background: #fff8f9;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    .menu-links a {
+      display: block;
+      padding: 0.8rem 0;
+      text-decoration: none;
+      color: #c2185b; /* Darker pink */
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .menu-links a:hover {
       text-decoration: underline;
+      background-color: #fde4ec;
     }
 
+    .menu-links.show {
+      display: flex;
+    }
+
+    /* Header */
     header {
-       background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 4.0rem 1rem 3rem;
-    text-align: center;
+      background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
+      padding: 3rem 1rem 2rem;
+      text-align: center;
     }
 
     header h1 {
-      font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    margin: 0;
-    color: #2c2c2c;
+      font-family: 'Noto Serif Georgian', serif;
+      font-size: 3.2rem;
+      margin: 0;
+      color: #2c2c2c;
     }
 
+    /* Main Content */
     main {
       max-width: 1000px;
       margin: 3rem auto;
       padding: 0 1.5rem;
     }
 
-   .section {
+    .section {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       margin-bottom: 2.5rem;
       gap: 1.5rem;
-   }
+    }
 
-   .section img {
-     width: 100%;
-     max-width: 300px;
-     height: auto;
-     border-radius: 10px;
-     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-     flex: 1 1 30%;
-   }
+    .section img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 10px;
+      border: 4px solid #f48fb1; /* Pink border */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      flex: 1 1 30%;
+    }
 
-  .section .text {
-     flex: 1 1 60%;
-}
+    .section .text {
+      flex: 1 1 60%;
+    }
 
-  .section:nth-child(even) {
-    flex-direction: row-reverse;
-  }
+    .section h2 {
+      font-family: 'Noto Serif Georgian', serif;
+      font-size: 2rem;
+      color: #c2185b;
+      margin-bottom: 1rem;
+    }
 
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    /* Footer */
     footer {
-     background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #c2185b;
-    margin-top: 2rem;
+      background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #c2185b;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+      .menu-links {
+        display: none;
+        flex-direction: column;
+      }
+      .menu-links.show {
+        display: flex;
+      }
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .section img {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Our Mission</a>
-    <a href="jaki.html">Meet Jaki</a>
-    <a href="awardrecipients.html">Award Recipients</a>
-    <a href="team.html">Meet the Committee</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="applicationresources.html">Application Resources</a>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Our Mission</a>
+      <a href="jaki.html">Meet Jaki</a>
+      <a href="awardrecipients.html">Award Recipients</a>
+      <a href="team.html">Meet the Committee</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="applicationresources.html">Application Resources</a>
+    </div>
   </nav>
 
   <header>
-    <h1>Jaki Gonzalez Spirit of Excellence Scholarship</h1>
+    <h1>Meet Jaki</h1>
   </header>
 
   <main>
-
     <div class="section">
       <img src="images/princetonacceptance.jpg" alt="Jaki grad">
       <div class="text">
@@ -142,12 +206,16 @@
         <p>This scholarship is one of many ways we carry forward Jaki’s light. Her legacy lives on in the lives of every student we support—each one touched by her story of resilience and excellence.</p>
       </div>
     </div>
-
   </main>
 
   <footer>
     &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuLinks').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
