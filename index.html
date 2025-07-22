@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,25 +14,55 @@
       color: #444;
     }
 
+    /* Navigation Styles */
     nav {
       background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 1rem 0;
-      text-align: center;
+      padding: 0.5rem 1rem;
+      position: relative;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    nav a {
-      margin: 0 1rem;
+    .menu-btn {
+      background: none;
+      border: none;
+      color: #e65100;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      background: #fffaf0;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    .menu-links a {
+      display: block;
+      padding: 0.8rem 0;
       text-decoration: none;
       color: #e65100; /* Dark orange */
       font-weight: 600;
       font-size: 1rem;
     }
 
-    nav a:hover {
+    .menu-links a:hover {
       text-decoration: underline;
+      background-color: #fff3d0;
     }
 
+    .menu-links.show {
+      display: flex;
+    }
+
+    /* Header */
     header {
       background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
       padding: 3rem 1rem 2rem;
@@ -53,6 +85,7 @@
       margin-top: 0.5rem;
     }
 
+    /* Main Content */
     main {
       max-width: 1000px;
       margin: 3rem auto;
@@ -123,3 +156,48 @@
     }
   </style>
 </head>
+<body>
+
+  <nav>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Our Mission</a>
+      <a href="jaki.html">Meet Jaki</a>
+      <a href="awardrecipients.html">Award Recipients</a>
+      <a href="team.html">Meet the Committee</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="applicationresources.html">Application Resources</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Jaki Gonzalez</h1>
+    <h2>Spirit of Excellence Scholarship</h2>
+  </header>
+
+  <main>
+    <section class="mission-section">
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>
+          The Jaki Gonzalez Spirit of Excellence Scholarship honors the life and legacy of Jaki Gonzalez ’21 by supporting exceptional students at Harvard High School in Harvard, Illinois—students who, like Jaki, embody excellence, resilience, and a deep commitment to service. This scholarship not only celebrates who Jaki was, but also invests in the next generation of changemakers who carry forward her spirit and determination.
+        </p>
+        <a href="#" class="donate-button">Donate to Support Our Mission</a>
+      </div>
+      <div class="mission-image">
+        <img src="images/fullgrad.jpg" alt="Jaki on Graduation Day">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuLinks').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
