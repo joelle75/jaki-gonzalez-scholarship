@@ -3,48 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Award Recipients | Jaki Gonzalez Scholarship</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Contact Us | Jaki Gonzalez Scholarship</title>
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fdf7f3;
+      font-family: 'Helvetica', sans-serif;
+      background-color: #fffaf0; /* Soft off-white */
       color: #444;
     }
 
+    /* Navigation Styles */
     nav {
-      background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
+      padding: 0.5rem 1rem;
+      position: relative;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    nav a {
-      margin: 0 1rem;
-    text-decoration: none;
-    color: #c2185b; /* Darker pink */
-    font-weight: 600;
-    font-size: 1rem;
+    .menu-btn {
+      background: none;
+      border: none;
+      color: #e65100;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
     }
 
-    nav a:hover {
+    .menu-links {
+      display: none;
+      flex-direction: column;
+      background: #fffaf0;
+      position: absolute;
+      top: 3rem;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+
+    .menu-links a {
+      display: block;
+      padding: 0.8rem 0;
+      text-decoration: none;
+      color: #e65100; /* Dark orange */
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .menu-links a:hover {
       text-decoration: underline;
+      background-color: #fff3d0;
     }
 
+    .menu-links.show {
+      display: flex;
+    }
+
+    /* Header */
     header {
-       background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 4.0rem 1rem 3rem;
-    text-align: center;
+      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
+      padding: 3rem 1rem 2rem;
+      text-align: center;
     }
 
     header h1 {
-     font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    margin: 0;
-    color: #2c2c2c;
+      font-family: 'Noto Serif Georgian', serif;
+      font-size: 3.6rem;
+      margin: 0;
+      color: #2c2c2c;
     }
 
+    /* Main Content */
     main {
       max-width: 1000px;
       margin: 3rem auto;
@@ -52,62 +84,100 @@
     }
 
     h2 {
-      font-family: 'Playfair Display', serif;
+      font-family: 'Noto Serif Georgian', serif;
       font-size: 2rem;
-      color: #c2185b;
+      color: #e65100;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-family: 'Helvetica', sans-serif;
+    }
+
+    .contact-form button {
+      background-color: #fff176;
+      color: #e65100;
+      font-weight: 600;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #ffe54c;
+    }
+
+    /* Footer */
     footer {
-       background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #c2185b;
-    margin-top: 2rem;
+      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #e65100;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Our Mission</a>
-    <a href="jaki.html">Meet Jaki</a>
-    <a href="awardrecipients.html">Award Recipients</a>
-    <a href="team.html">Meet the Committee</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="applicationresources.html">Application Resources</a>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Our Mission</a>
+      <a href="jaki.html">Meet Jaki</a>
+      <a href="awardrecipients.html">Award Recipients</a>
+      <a href="team.html">Meet the Committee</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="applicationresources.html">Application Resources</a>
+    </div>
   </nav>
 
   <header>
-    <h1>Jaki Gonzalez Spirit of Excellence Scholarship</h1>
+    <h1>Contact Us</h1>
   </header>
 
-   <main>
-  <section style="text-align: center; margin: 5rem 0;">
+  <main>
+    <section class="contact-form">
+      <h2>Have a question? Reach out!</h2>
+      <form action="https://formsubmit.co/jrmcmillan7@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New scholarship site message">
+        <input type="hidden" name="_cc" value="jpmcmill14@gmail.com,dsjjm@yahoo.com">
 
-  <section style="max-width: 600px; margin: 0 auto; padding: 2rem; background-color: #fff8f9; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-    <h2>Have a question? Reach out!</h2>
-    <form action="https://formsubmit.co/jrmcmillan7@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="New scholarship site message">
-      <input type="hidden" name="_cc" value="jpmcmill14@gmail.com,dsjjm@yahoo.com">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Question or Message" rows="5" required></textarea>
 
-      <div style="margin-bottom: 1rem;">
-        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.7rem; border-radius: 6px; border: 1px solid #ccc;">
-      </div>
-
-      <div style="margin-bottom: 1rem;">
-        <textarea name="message" placeholder="Your Question or Message" rows="5" required style="width: 100%; padding: 0.7rem; border-radius: 6px; border: 1px solid #ccc;"></textarea>
-      </div>
-
-      <button type="submit" style="background-color: #fff176; color: #c2185b; font-weight: 600; padding: 0.8rem 1.6rem; border: none; border-radius: 6px; cursor: pointer;">Submit</button>
-    </form>
-  </section>
-</main>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
   </footer>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuLinks').classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
