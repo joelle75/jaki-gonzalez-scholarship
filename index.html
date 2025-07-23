@@ -119,19 +119,23 @@
     }
 
     .donate-button {
-      display: inline-block;
-      background-color: #fff176; /* Yellow */
-      color: #e65100; /* Dark orange */
-      font-weight: 600;
+      display: block;
+      background-color: #fff176; /* Light yellow from ribbon */
+      color: #e65100; /* Dark orange text */
+      font-weight: bold;
+      text-align: center;
       padding: 0.8rem 1.6rem;
       border-radius: 6px;
       text-decoration: none;
-      margin-top: 1.5rem;
-      transition: background-color 0.3s ease;
+      margin: 1.5rem auto 0; /* Center horizontally */
+      max-width: 300px;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .donate-button:hover {
-      background-color: #ffe54c;
+      background-color: #ffe54c; /* Slightly darker yellow on hover */
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .mission-image {
@@ -180,9 +184,9 @@
       <div class="mission-text">
         <h2>Our Mission</h2>
         <p>
-          The Jaki Gonzalez Spirit of Excellence Scholarship honors the life and legacy of Jaki Gonzalez ’21 by supporting exceptional graduating seniors from Harvard High School in Harvard, Illinois, as they pursue higher education. It is awarded to students who, like Jaki, embody excellence, resilience, and a deep commitment to learning. This scholarship not only celebrates who Jaki was but also invests in the next generation of changemakers who carry forward her spirit and determination. We invite you to donate to support our mission.
-        </
-        <a href="#" class="donate-button">Donate to Support Our Mission Here</a>
+          The Jaki Gonzalez Spirit of Excellence Scholarship honors the life and legacy of Jaki Gonzalez ’21, who rose from humble beginnings to graduate Valedictorian of Harvard High School’s 100th class and earn a full-tuition scholarship to Princeton University. Jaki’s story is one of resilience, brilliance, and unwavering dedication to learning. This scholarship celebrates her remarkable journey and supports exceptional seniors from Harvard High School who, like Jaki, embody excellence and determination. We invite you to donate and help carry her spirit forward.
+        </p>
+        <a href="#" class="donate-button">Click Here to Donate to Support Our Mission</a>
       </div>
       <div class="mission-image">
         <img src="images/fullgrad.jpg" alt="Jaki on Graduation Day">
