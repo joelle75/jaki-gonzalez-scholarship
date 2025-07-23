@@ -3,31 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="The Jaki Gonzalez Spirit of Excellence Scholarship honors Jaki Gonzalez's legacy by supporting exceptional Harvard High School seniors pursuing higher education."/>
+  <meta name="keywords" content="Jaki Gonzalez Scholarship, Harvard High School, Spirit of Excellence, scholarship, education, Princeton University"/>
+  <meta name="author" content="The Jaki Gonzalez Spirit of Excellence Scholarship Committee"/>
+  <meta property="og:title" content="The Jaki Gonzalez Spirit of Excellence Scholarship"/>
+  <meta property="og:description" content="Honoring Jaki Gonzalez by supporting Harvard High School seniors who embody excellence, resilience, and learning."/>
+  <meta property="og:image" content="images/fullgrad.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow">
   <title>Meet Jaki - The Jaki Gonzalez Spirit of Excellence Scholarship</title>
   <!-- Import Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+   body {
       margin: 0;
       font-family: 'Helvetica', sans-serif;
       background-color: #fffaf0; /* Soft off-white */
       color: #444;
+      line-height: 1.7;
+      font-size: 1.05rem;
     }
 
     /* Navigation Styles */
     nav {
       background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 0.5rem 1rem;
-      position: relative;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 0.8rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
     .menu-btn {
       background: none;
       border: none;
-      color: #e65100; /* Dark orange */
-      font-size: 1.2rem;
-      font-weight: 600;
+      color: #e65100;
+      font-size: 1.5rem;
+      font-weight: 700;
       cursor: pointer;
     }
 
@@ -36,7 +48,7 @@
       flex-direction: column;
       background: #fffaf0;
       position: absolute;
-      top: 3rem;
+      top: 3.2rem;
       left: 0;
       width: 100%;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -46,11 +58,11 @@
 
     .menu-links a {
       display: block;
-      padding: 0.8rem 0;
+      padding: 0.9rem 0;
       text-decoration: none;
       color: #e65100; /* Dark orange */
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 1.05rem;
     }
 
     .menu-links a:hover {
@@ -65,86 +77,100 @@
     /* Header */
     header {
       background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 3rem 1rem 2rem;
+      padding: 3.5rem 1rem 2.5rem;
       text-align: center;
     }
 
-    header h1 {
+    header h1,
+    header h2 {
       font-family: 'Noto Serif Georgian', serif;
-      font-size: 3.2rem;
       margin: 0;
       color: #2c2c2c;
     }
 
+    header h1 {
+      font-size: 3.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header h2 {
+      font-size: 2.2rem;
+      margin-top: 0.5rem;
+    }
+
     /* Main Content */
     main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 2rem;
     }
 
-    .section {
+    .mission-section {
       display: flex;
       flex-wrap: wrap;
+      gap: 2.5rem;
       align-items: center;
-      margin-bottom: 2.5rem;
-      gap: 1.5rem;
+      justify-content: center;
+      margin-bottom: 4rem;
     }
 
-    .section img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      border-radius: 10px;
-      border: 4px solid #ffa726; /* Orange border */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      flex: 1 1 30%;
+    .mission-text {
+      flex: 1 1 50%;
+      text-align: left;
     }
 
-    .section .text {
-      flex: 1 1 60%;
-    }
-
-    .section h2 {
+    .mission-text h2 {
       font-family: 'Noto Serif Georgian', serif;
-      font-size: 2rem;
+      font-size: 2.4rem;
       color: #e65100; /* Dark orange */
-      margin-bottom: 1rem;
+      margin-bottom: 1.2rem;
     }
 
-    .section:nth-child(even) {
-      flex-direction: row-reverse;
+    .mission-text p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
     }
 
-    /* Footer */
+    .donate-button {
+      display: block;
+      background-color: #fff176; /* Lightest yellow */
+      color: #e65100; /* Dark orange */
+      font-weight: bold;
+      text-align: center;
+      padding: 0.9rem 1.8rem;
+      border-radius: 6px;
+      text-decoration: none;
+      margin: 1.5rem auto 0; /* Center horizontally */
+      max-width: 320px;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .donate-button:hover {
+      background-color: #ffe54c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .mission-image {
+      flex: 1 1 40%;
+    }
+
+    .mission-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 12px;
+      border: 4px solid #ffa726; /* Orange border */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
     footer {
       background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 1rem;
+      padding: 1.2rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #e65100;
-      margin-top: 2rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .menu-btn {
-        display: block;
-      }
-      .menu-links {
-        display: none;
-        flex-direction: column;
-      }
-      .menu-links.show {
-        display: flex;
-      }
-      .section {
-        flex-direction: column;
-        text-align: center;
-      }
-      .section img {
-        max-width: 100%;
-      }
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -205,3 +231,17 @@
     </p>
   </div>
 </div>
+</section>
+</main>
+
+  <footer>
+    &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('menuLinks').classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
