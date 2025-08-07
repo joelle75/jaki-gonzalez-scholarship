@@ -97,13 +97,32 @@
       text-align: center;
     }
 
-    .family-section img {
+    .family-section img.main-family {
       width: 100%;
       max-width: 600px;
       margin: 1.5rem auto;
       display: block;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* New: side-by-side family gallery */
+    .family-gallery {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .family-gallery img {
+      flex: 1 1 300px;         /* responsive columns */
+      max-width: 480px;        /* cap width so they don’t stretch too wide */
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      object-fit: cover;
     }
 
     .committee-grid {
@@ -118,6 +137,10 @@
       flex: 1 1 250px;
       max-width: 300px;
       text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
     .member img {
@@ -127,18 +150,28 @@
       object-fit: cover;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
+      margin: 0 auto 0.75rem;
+      display: block;
     }
 
     .member h3 {
-      margin: 0.5rem 0 0;
+      margin: 0.25rem 0 0.25rem;
       font-size: 1.2rem;
       color: #e65100;
     }
 
-    .member p {
-      font-size: 1rem;
+    .member .role {
+      font-size: 0.95rem;
       color: #555;
+      margin: 0 0 0.5rem;
+    }
+
+    /* New: short intro field */
+    .member .intro {
+      font-size: 0.95rem;
+      color: #666;
+      font-style: italic;
+      margin: 0.25rem 0 0;
     }
 
     /* Footer */
@@ -149,6 +182,16 @@
       font-size: 0.9rem;
       color: #e65100;
       margin-top: 2rem;
+    }
+
+    /* Responsive tweak so gallery stacks on small screens */
+    @media (max-width: 640px) {
+      .family-gallery {
+        gap: 0.75rem;
+      }
+      .member {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -175,26 +218,37 @@
       <h2>Jaki’s Family</h2>
       <p>
         Jaki and her family are the heart of this scholarship. Their strength, love, and dedication to honoring her legacy inspire every aspect of our work. They remain at the core of the selection process and continue to shape the values that guide this scholarship.
-      <img src="images/jaki-family.jpg" alt="Jaki’s Family">
+      </p>
+
+      <img class="main-family" src="images/jaki-family.jpg" alt="Jaki’s Family">
+
+      <!-- New: side-by-side images under the description -->
+      <div class="family-gallery">
+        <img src="images/IMG_4778.jpg" alt="Family photo 1">
+        <img src="images/img_3476.JPG" alt="Family photo 2">
+      </div>
     </section>
 
     <section class="committee-section">
       <h2>Scholarship Committee</h2>
       <div class="committee-grid">
         <div class="member">
-          <img src="images/joelle.jpg" alt="Joelle McMillan">
+          <img src="images/IWU-113.jpg" alt="Joelle McMillan">
           <h3>Joelle McMillan</h3>
-          <p>Founder, Committee Member</p>
+          <p class="role">Founder, Committee Member</p>
+          <p class="intro">(information pending)</p>
         </div>
         <div class="member">
           <img src="images/melany.jpg" alt="Melany Avila">
           <h3>Melany Avila</h3>
-          <p>Committee Member</p>
+          <p class="role">Committee Member</p>
+          <p class="intro">(information pending)</p>
         </div>
         <div class="member">
           <img src="images/kerrigan.jpg" alt="Kerrigan Kotecki">
           <h3>Kerrigan Kotecki</h3>
-          <p>Committee Member</p>
+          <p class="role">Committee Member</p>
+          <p class="intro">(information pending)</p>
         </div>
       </div>
     </section>
