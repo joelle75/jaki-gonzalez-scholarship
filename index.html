@@ -15,164 +15,162 @@
   <!-- Import Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica', sans-serif;
-      background-color: #fffaf0; /* Soft off-white */
-      color: #444;
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
+  /* ---------- Color System (60–30–10) ---------- */
+  :root{
+    --neutral-bg: #fffaf0;     /* 60%: soft off-white */
+    --warm-amber: #ffd166;     /* 30%: softer header/footer gradient */
+    --warm-cream: #fff3a6;
+    --accent-navy:#0d3b66;     /* 10%: cool accent */
+    --brand-orange:#e65100;    /* highlights/headings */
+  }
 
-    /* Navigation Styles */
-    nav {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 0.8rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+  body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: var(--neutral-bg);
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
 
-    .menu-btn {
-      background: none;
-      border: none;
-      color: #e65100;
-      font-size: 1.5rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
+  /* Navigation */
+  nav {
+    background: linear-gradient(90deg, var(--warm-amber), var(--warm-cream), var(--warm-amber));
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
 
-    .menu-links {
-      display: none;
-      flex-direction: column;
-      background: #fffaf0;
-      position: absolute;
-      top: 3.2rem;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 0.5rem 0;
-      text-align: center;
-    }
+  .menu-btn {
+    background: none;
+    border: none;
+    color: var(--brand-orange);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
 
-    .menu-links a {
-      display: block;
-      padding: 0.9rem 0;
-      text-decoration: none;
-      color: #e65100; /* Dark orange */
-      font-weight: 600;
-      font-size: 1.05rem;
-    }
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background: var(--neutral-bg);
+    position: absolute;
+    top: 3.2rem;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    text-align: center;
+  }
 
-    .menu-links a:hover {
-      text-decoration: underline;
-      background-color: #fff3d0;
-    }
+  .menu-links a {
+    display: block;
+    padding: 0.9rem 0;
+    text-decoration: none;
+    color: var(--brand-orange);
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
 
-    .menu-links.show {
-      display: flex;
-    }
+  .menu-links a:hover {
+    text-decoration: underline;
+    background-color: #fff7cc; /* pale warm */
+  }
 
-    /* Header */
-    header {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 3.5rem 1rem 2.5rem;
-      text-align: center;
-    }
+  .menu-links.show { display: flex; }
 
-    header h1,
-    header h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      margin: 0;
-      color: #2c2c2c;
-    }
+  /* Header (softer gradient) */
+  header {
+    background: linear-gradient(90deg, var(--warm-amber), var(--warm-cream), var(--warm-amber));
+    padding: 3.5rem 1rem 2.5rem;
+    text-align: center;
+  }
 
-    header h1 {
-      font-size: 3.8rem;
-      margin-bottom: 0.3rem;
-    }
+  header h1, header h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    margin: 0;
+    color: #2c2c2c;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  }
 
-    header h2 {
-      font-size: 2.2rem;
-      margin-top: 0.5rem;
-    }
+  header h1 { font-size: 3.8rem; margin-bottom: 0.3rem; }
+  header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
 
-    /* Main Content */
-    main {
-      max-width: 1100px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-    }
+  /* Main */
+  main {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
 
-    .mission-section {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 4rem;
-    }
+  .mission-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
 
-    .mission-text {
-      flex: 1 1 50%;
-      text-align: left;
-    }
+  .mission-text { flex: 1 1 50%; text-align: left; }
 
-    .mission-text h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      font-size: 2.4rem;
-      color: #e65100; /* Dark orange */
-      margin-bottom: 1.2rem;
-    }
+  .mission-text h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2.4rem;
+    color: var(--brand-orange);
+    margin-bottom: 1.2rem;
+  }
 
-    .mission-text p {
-      font-size: 1.15rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
+  .mission-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
 
-    .donate-button {
-      display: block;
-      background-color: #fff176; /* Lightest yellow */
-      color: #e65100; /* Dark orange */
-      font-weight: bold;
-      text-align: center;
-      padding: 0.9rem 1.8rem;
-      border-radius: 6px;
-      text-decoration: none;
-      margin: 1.5rem auto 0; /* Center horizontally */
-      max-width: 320px;
-      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    }
+  /* CTA uses cool accent for contrast */
+  .donate-button {
+    display: block;
+    background-color: var(--accent-navy);
+    color: #fffaf0;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 1.5rem auto 0;
+    max-width: 340px;
+    border: 2px solid transparent;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
 
-    .donate-button:hover {
-      background-color: #ffe54c;
-      transform: scale(1.05);
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
+  .donate-button:hover {
+    background-color: #115283;          /* slightly lighter navy */
+    border-color: var(--warm-amber);    /* warm halo */
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(13,59,102,0.25);
+  }
 
-    .mission-image {
-      flex: 1 1 40%;
-    }
+  .mission-image { flex: 1 1 40%; }
+  .mission-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    border: 4px solid var(--accent-navy); /* cooler frame */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
 
-    .mission-image img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 12px;
-      border: 4px solid #ffa726; /* Orange border */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    footer {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 1.2rem;
-      text-align: center;
-      font-size: 1rem;
-      color: #e65100;
-      margin-top: 3rem;
-    }
-  </style>
+  /* Footer (softer gradient, small contrast text) */
+  footer {
+    background: linear-gradient(90deg, var(--warm-amber), var(--warm-cream), var(--warm-amber));
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--brand-orange);
+    margin-top: 3rem;
+  }
+</style>
 </head>
 <body>
 
