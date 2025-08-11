@@ -87,16 +87,16 @@
   /* Lemon yellow (no gradient) with fades to off-white on both edges */
   header {
     position: relative;
-     background: linear-gradient(
+    background: linear-gradient(
     to bottom,
-    #fffaf0 0%,          /* Off-white at very top */
-    #ffeb3b 15%,         /* Lemon yellow starts */
-    #ffeb3b 85%,         /* Lemon yellow stays */
-    #fffaf0 100%         /* Off-white at very bottom */
+      #fffaf0 0%,         /* Off-white top fade */
+      #ffcc33 15%,        /* Golden yellow start */
+      #ffcc33 85%,        /* Golden yellow hold */
+      #fffaf0 100%        /* Off-white bottom fade */
   );
   padding: 3.5rem 1rem 2.5rem;
   text-align: center;
-  }
+}
 
   header h1,
   header h2 {
@@ -169,13 +169,17 @@
 
   /* ---------- FOOTER: pure lemon with soft edges ---------- */
   footer {
-    position: relative;
-    background: #ffeb3b; /* pure lemon */
-    padding: 1.2rem;
-    text-align: center;
-    font-size: 1rem;
-    color: #e65100;
-    margin-top: 3rem;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #ffcc33 0%,         /* Golden yellow */
+    #fffaf0 100%        /* Fade into off-white */
+  );
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #e65100;
+  margin-top: 3rem;
   }
   /* Fade into off-white above */
   footer::before {
