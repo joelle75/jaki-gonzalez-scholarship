@@ -87,27 +87,15 @@
   /* Lemon yellow (no gradient) with fades to off-white on both edges */
   header {
     position: relative;
-    background: #ffeb3b; /* pure lemon */
-    padding: 3.5rem 1rem 2.5rem;
-    text-align: center;
-  }
-  /* Fade to off-white above (toward nav) */
-  header::before {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    top: -20px; height: 20px;
-    background: linear-gradient(to top, rgba(255,235,59,0) 0%, #fffaf0 100%);
-    pointer-events: none;
-  }
-  /* Fade to off-white below (toward main) */
-  header::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    bottom: -24px; height: 24px;
-    background: linear-gradient(to bottom, rgba(255,235,59,0) 0%, #fffaf0 100%);
-    pointer-events: none;
+     background: linear-gradient(
+    to bottom,
+    #fffaf0 0%,          /* Off-white at very top */
+    #ffeb3b 15%,         /* Lemon yellow starts */
+    #ffeb3b 85%,         /* Lemon yellow stays */
+    #fffaf0 100%         /* Off-white at very bottom */
+  );
+  padding: 3.5rem 1rem 2.5rem;
+  text-align: center;
   }
 
   header h1,
