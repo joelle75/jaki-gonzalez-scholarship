@@ -127,6 +127,35 @@ header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
     margin-bottom: 1.5rem;
   }
 
+    /* Header container: logo + text side by side */
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem; /* space between logo and text */
+  text-align: left; /* align text to the left */
+}
+
+/* Logo size */
+.logo {
+  height: 80px;   /* adjust as needed */
+  width: auto;
+}
+
+/* Text alignment override (remove old center text-align) */
+header {
+  position: relative;
+  background: #F4E3C1; /* solid beige */
+  padding: 2rem 1rem;
+  text-align: left; /* left-align overall */
+}
+
+header h1, header h2 {
+  margin: 0;
+  color: #0A2742; /* navy */
+  font-family: 'Noto Serif Georgian', serif;
+}
+    
   /* ---------- DONATE button: orange background, white text ---------- */
   .donate-button {
     display: block;
@@ -209,8 +238,13 @@ header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
   </nav>
 
   <header>
-    <h1>Jaki Gonzalez</h1>
-    <h2>Spirit of Excellence Scholarship</h2>
+  <div class="header-left">
+    <img src="images/JGSES_Logo-bgremoved.png" alt="JGSES Logo" class="logo">
+    <div class="header-text">
+      <h1>Jaki Gonzalez</h1>
+      <h2>Spirit of Excellence Scholarship</h2>
+    </div>
+  </div>
   </header>
 
   <main>
