@@ -97,8 +97,8 @@ header h2 {
   margin: 0;
   color: #F9F7F4;                  /* off-white text */
 }
-header h1 { font-size: 3.2rem; margin-bottom: 0.3rem; }
-header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
+header h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
+header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
 
   /* Main */
   main {
@@ -139,7 +139,7 @@ header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
 
 /* Logo size */
 .logo {
-  height: 200px;   /* adjust as needed */
+  height: 250px;   /* adjust as needed */
   width: auto;
 }
 
@@ -208,6 +208,12 @@ footer a {
   text-decoration: none;
   font-weight: 600;
 }
+/* Footer logo styling */
+.footer-logo {
+  height: 200px;   /* adjust size as needed */
+  width: auto;
+  margin-bottom: 1rem; /* space between logo and text */
+}  
 footer a:hover { text-decoration: underline; }
 
 /* REMOVE old gradient edges */
@@ -254,15 +260,19 @@ footer::after { display: none; content: none; }
     </section>
   </main>
 
-  <footer>
-      <div class="footer-inner">
-       <p>A non-profit pending 501(c)(3) charity organization status</p>
-       <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
-       <p>PO Box 104 Harvard, IL 60033-9782</p>
-       <p>EIN: 39-3707357</p>
-       <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
+<footer>
+  <div class="footer-inner">
+    <img src="images/JGSES_logo_w_off-white_book-removebg.png" 
+         alt="JGSES Logo" 
+         class="footer-logo">
+
+    <p>A non-profit pending 501(c)(3) charity organization status</p>
+    <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
+    <p>PO Box 104 Harvard, IL 60033-9782</p>
+    <p>EIN: 39-3707357</p>
+    <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
   </div>
-  <footer>  
+</footer>  
 
   <script>
     function toggleMenu() {
