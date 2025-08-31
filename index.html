@@ -83,6 +83,9 @@ nav {
   color: #FFD166;                  /* gold hover */
   background-color: transparent;   /* keep clean background */
 }
+.menu-links.show {
+  display: flex;   /* allow dropdown to expand */
+}
 /* ---------- HEADER: solid navy (no gradient) ---------- */
 header {
   position: relative;
@@ -276,7 +279,9 @@ footer::after { display: none; content: none; }
 
   <script>
     function toggleMenu() {
-      document.getElementById('menuLinks').classList.toggle('show');
+      document.getElementById('menuLinks').classList.toggle('show')
+    const menu = document.getElementById("menuLinks");
+      menu.classList.toggle("show");
     }
   </script>
 </body>
