@@ -190,38 +190,35 @@ header h1, header h2 {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  /* ---------- FOOTER: pure lemon with soft edges ---------- */
-  footer {
-  position: relative;
-  background: linear-gradient(
-    to bottom,
-    #ffcc33 0%,         /* Golden yellow */
-    #fffaf0 100%        /* Fade into off-white */
-  );
-  padding: 1.2rem;
+  /* ---------- FOOTER: solid navy, larger, white text ---------- */
+footer {
+  background: #0A2742;   /* navy */
+  color: #ffffff;        /* white text */
+  padding: 2.25rem 1rem; /* bigger footer */
   text-align: center;
   font-size: 1rem;
-  color: #e65100;
+  line-height: 1.6;
   margin-top: 3rem;
-  }
-  /* Fade into off-white above */
-  footer::before {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    top: -24px; height: 24px;
-    background: linear-gradient(to top, rgba(255,235,59,0) 0%, #fffaf0 100%);
-    pointer-events: none;
-  }
-  /* Optional: gentle fade at bottom edge too */
-  footer::after {
-    content: "";
-    position: absolute;
-    left: 0; right: 0;
-    bottom: -20px; height: 20px;
-    background: linear-gradient(to bottom, rgba(255,235,59,0) 0%, #fffaf0 100%);
-    pointer-events: none;
-  }
+}
+
+/* optional: constrain line length for readability */
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* make any links in footer readable on navy */
+footer a {
+  color: #FFD166;              /* gold/yellow accent */
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a:hover { text-decoration: underline; }
+
+/* REMOVE old gradient edges */
+footer::before,
+footer::after { display: none; content: none; }
 </style>
 </head>
 <body>
@@ -264,8 +261,17 @@ header h1, header h2 {
   </main>
 
   <footer>
-    &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
-  </footer>
+    <div class="footer-inner">
+    <p>
+      A non-profit pending 501(c)(3) charity organization status •
+      <a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a> •
+      PO Box 104 Harvard, IL 60033-9782 • EIN: 39-3707357
+    </p>
+    <p>
+      &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
+    </p>
+   </div>
+  <footer>  
 
   <script>
     function toggleMenu() {
