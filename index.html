@@ -71,6 +71,9 @@ nav {
   padding: 0.5rem 0;
   text-align: center;
 }
+.menu-links.show {
+  display: flex;   /* allow dropdown to expand */
+}
 .menu-links a {
   display: block;
   padding: 0.9rem 0;
@@ -82,9 +85,6 @@ nav {
 .menu-links a:hover {
   color: #FFD166;                  /* gold hover */
   background-color: transparent;   /* keep clean background */
-}
-.menu-links.show {
-  display: flex;   /* allow dropdown to expand */
 }
 /* ---------- HEADER: solid navy (no gradient) ---------- */
 header {
@@ -276,13 +276,11 @@ footer::after { display: none; content: none; }
     <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
   </div>
 </footer>  
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('menuLinks').classList.toggle('show')
+<script>
+  function toggleMenu() {
     const menu = document.getElementById("menuLinks");
-      menu.classList.toggle("show");
-    }
-  </script>
+    menu.classList.toggle("show");
+  }
+</script>
 </body>
 </html>
