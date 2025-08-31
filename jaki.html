@@ -13,7 +13,6 @@
   <meta name="robots" content="index, follow">
   <title>Meet Jaki - The Jaki Gonzalez Spirit of Excellence Scholarship</title>
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
@@ -21,7 +20,7 @@
     body {
       margin: 0;
       font-family: 'Helvetica', sans-serif;
-      background-color: #fffaf0; /* Soft off-white */
+      background-color: #fffaf0;
       color: #444;
       line-height: 1.7;
       font-size: 1.05rem;
@@ -29,7 +28,7 @@
 
     /* ---------- NAV: navy ribbon ---------- */
     nav {
-      background: #0A2742; /* navy */
+      background: #0A2742;
       padding: 0.8rem 1rem;
       position: sticky;
       top: 0;
@@ -37,11 +36,9 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.06);
       border-bottom: none;
     }
-
-    /* Menu button */
     .menu-btn {
-      background: #F4E3C1; /* beige */
-      color: #0A2742;      /* navy text */
+      background: #F4E3C1;
+      color: #0A2742;
       border: none;
       padding: 0.55rem 1rem;
       border-radius: 8px;
@@ -51,141 +48,100 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
     }
-    .menu-btn:hover,
-    .menu-btn:focus-visible {
-      background: #FFD166; /* yellow hover */
-      color: #0A2742;
-      transform: translateY(-1px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      outline: none;
+    .menu-btn:hover,.menu-btn:focus-visible{
+      background:#FFD166; color:#0A2742; transform:translateY(-1px);
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      outline:none;
     }
-
-    /* Dropdown menu links */
-    .menu-links {
-      display: none;
-      flex-direction: column;
-      background: #F4E3C1; /* beige dropdown */
-      position: absolute;
-      top: 3.2rem;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 0.5rem 0;
-      text-align: center;
+    .menu-links{
+      display:none; flex-direction:column; background:#F4E3C1;
+      position:absolute; top:3.2rem; left:0; width:100%;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:0.5rem 0; text-align:center;
     }
-    .menu-links.show { display: flex; }
-    .menu-links a {
-      display: block;
-      padding: 0.9rem 0;
-      text-decoration: none;
-      color: #0A2742;
-      font-weight: 600;
-      font-size: 1.05rem;
+    .menu-links.show{display:flex;}
+    .menu-links a{
+      display:block; padding:0.9rem 0; text-decoration:none;
+      color:#0A2742; font-weight:600; font-size:1.05rem;
     }
-    .menu-links a:hover {
-      color: #FFD166;
-      background-color: transparent;
-    }
+    .menu-links a:hover{color:#FFD166; background:transparent;}
 
     /* ---------- HEADER: navy with logo + scholarship name ---------- */
     header {
       position: relative;
-      background: #0A2742; /* navy */
-      padding: 2.5rem 1rem;
+      background: #0A2742;
+      padding: 2.0rem 1rem 1.5rem; /* a bit tighter since page title moved out */
       text-align: center;
     }
-    .header-center {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
+    .header-center{
+      display:flex; flex-direction:row; align-items:center; justify-content:center; gap:1rem;
     }
-    .logo {
-      height: 200px;
-      width: auto;
+    .logo{ height:200px; width:auto; }
+    .header-text h1,.header-text h2{
+      font-family:'Noto Serif Georgian',serif; margin:0; color:#F9F7F4;
     }
-    .header-text h1,
-    .header-text h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      margin: 0;
-      color: #F9F7F4; /* off-white */
-    }
-    .header-text h1 { font-size: 3.8rem; margin-bottom: 0.3rem; }
-    .header-text h2 { font-size: 2.2rem; margin-top: 0.5rem; }
+    .header-text h1{ font-size:3.8rem; margin-bottom:0.3rem; }
+    .header-text h2{ font-size:2.2rem; margin-top:0.5rem; }
 
-    /* Page-specific title below logo */
+    /* ---------- PAGE TITLE (now below ribbon/header, above sections) ---------- */
     .page-title {
-      text-align: center;
-      margin-top: 1.5rem;
+      text-align:center;
+      padding: 1.75rem 1rem 0.5rem; /* separation from header */
     }
-    .page-title h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      font-size: 2.8rem;
-      color: #F9F7F4;
-      margin: 0;
+    .page-title h2{
+      font-family:'Noto Serif Georgian',serif;
+      font-size:2.8rem; color:#0A2742; /* navy text on off-white page bg */
+      margin:0;
     }
 
     /* ---------- MAIN LAYOUT ---------- */
     main {
       max-width: 1100px;
-      margin: 4rem auto;
+      margin: 2rem auto 4rem; /* account for the page title block */
       padding: 0 2rem;
     }
+
+    /* Section base: image + text centered together */
     .section {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1.25rem;
       align-items: start;
       margin-bottom: 3rem;
     }
-    .section img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
+    .section .media,
+    .section .text {
+      display:flex; flex-direction:column; align-items:center; text-align:center;
     }
-    .section .text h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      font-size: 2rem;
-      color: #D4A017; /* Gold */
-      margin: 0 0 0.75rem 0;
+
+    /* Images: add 10px gold border */
+    .section img{
+      width:100%; height:auto; border-radius:12px; display:block;
+      border: 10px solid #D4A017; /* gold border */
     }
-    @media (min-width: 900px) {
-      .section {
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem;
-      }
+
+    .section .text h2{
+      font-family:'Noto Serif Georgian',serif;
+      font-size:2rem; color:#D4A017; margin:0.75rem 0 0.5rem 0;
+    }
+
+    /* Alternate layout on wide screens */
+    @media (min-width: 900px){
+      .section{ grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+      /* even sections: reverse the order so images/text alternate sides */
+      .section:nth-child(even) .media{ order:2; }
+      .section:nth-child(even) .text{ order:1; }
     }
 
     /* ---------- FOOTER ---------- */
     footer {
-      background: #0A2742;
-      color: #ffffff;
-      padding: 1.8rem 1rem;
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1.7;
-      margin-top: 2.5rem;
+      background: #0A2742; color:#ffffff; padding: 1.8rem 1rem;
+      text-align:center; font-size:1rem; line-height:1.7; margin-top:2.5rem;
     }
-    .footer-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-    footer a {
-      color: #FFD166;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    footer a:hover { text-decoration: underline; }
-    .footer-logo {
-      height: 250px;
-      width: auto;
-      margin-bottom: 0;
-    }
-    footer::before,
-    footer::after { display: none; content: none; }
+    .footer-inner{ max-width:1100px; margin:0 auto; padding:0 1rem; }
+    footer a{ color:#FFD166; text-decoration:none; font-weight:600; }
+    footer a:hover{ text-decoration:underline; }
+    .footer-logo{ height:250px; width:auto; margin-bottom:0; }
+    footer::before,footer::after{ display:none; content:none; }
   </style>
 </head>
 <body>
@@ -212,41 +168,53 @@
         <h2>Spirit of Excellence Scholarship</h2>
       </div>
     </div>
-
-    <!-- Page-specific title -->
-    <div class="page-title">
-      <h2>Meet Jaki</h2>
-    </div>
   </header>
+
+  <!-- PAGE TITLE (moved below ribbon/header) -->
+  <div class="page-title">
+    <h2>Meet Jaki</h2>
+  </div>
 
   <!-- MAIN CONTENT -->
   <main>
+    <!-- Section 1 (image left on desktop) -->
     <div class="section">
-      <img src="images/princetonacceptance.jpg" alt="Jaki grad">
+      <div class="media">
+        <img src="images/princetonacceptance4.jpg" alt="Jaki grad">
+      </div>
       <div class="text">
         <h2>A Spirit of Excellence</h2>
         <p>Jaki Gonzalez ’21 grew up in a community where resources were scarce and opportunities were not guaranteed. Despite facing many challenges, she excelled through hard work, discipline, and a belief in the power of education to create change. Jaki’s relentless dedication to her studies led her to graduate as Valedictorian of Harvard High School’s 100th graduating class. She applied to college and became the first student in her school’s history to receive a full-tuition scholarship to an Ivy League university—earning her place at Princeton University. Jaki’s brilliance, humility, and resilience inspired everyone around her.</p>
       </div>
     </div>
 
+    <!-- Section 2 (image right on desktop) -->
     <div class="section">
-      <img src="images/basketball1.JPG" alt="Jaki playing basketball">
+      <div class="media">
+        <img src="images/basketball1.JPG" alt="Jaki playing basketball">
+      </div>
       <div class="text">
         <h2>A Leader Beyond the Classroom</h2>
         <p>Jaki’s leadership extended well beyond academics. Whether mentoring her peers, lending a quiet word of encouragement, or leading on the basketball court, she embodied determination, teamwork, and grace. She was a role model for her classmates—a friend who uplifted others while setting the highest standards for herself.</p>
       </div>
     </div>
 
+    <!-- Section 3 (image left on desktop) -->
     <div class="section">
-      <img src="images/closeupgrad1.JPG" alt="Jaki at graduation">
+      <div class="media">
+        <img src="images/closeupgrad1.JPG" alt="Jaki at graduation">
+      </div>
       <div class="text">
         <h2>In Her Own Words</h2>
         <p>At her high school graduation, Jaki delivered a heartfelt speech that reminded her classmates that success is not a race but a personal journey. She believed that everyone’s path unfolds in its own time—whether through college, community work, or other meaningful endeavors. Her wisdom, courage, and deep compassion left a lasting impression on all who knew her.</p>
       </div>
     </div>
 
+    <!-- Section 4 (image right on desktop) -->
     <div class="section">
-      <img src="images/princeton2.jpg" alt="Jaki at Princeton">
+      <div class="media">
+        <img src="images/princeton2.jpg" alt="Jaki at Princeton">
+      </div>
       <div class="text">
         <h2>A Legacy of Excellence</h2>
         <p>Though Jaki’s life was tragically cut short, her legacy continues to shine. At Princeton, she thrived as part of the Freshman Scholars Institute and the Scholars Institute Fellows Program, where she guided and supported fellow students. Jaki was more than an extraordinary student—she was a symbol of hope and perseverance, proof that brilliance can emerge from even the most challenging circumstances. The Jaki Gonzalez Spirit of Excellence Scholarship honors her life, her achievements, and her enduring impact by supporting the next generation of students who, like Jaki, embody excellence, resilience, and a passion for learning.</p>
