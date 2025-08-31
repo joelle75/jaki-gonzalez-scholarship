@@ -12,41 +12,59 @@
   <meta property="og:type" content="website"/>
   <meta name="robots" content="index, follow">
   <title>Meet Jaki - The Jaki Gonzalez Spirit of Excellence Scholarship</title>
-  <!-- Import Google Fonts -->
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
+    /* Base */
     body {
       margin: 0;
       font-family: 'Helvetica', sans-serif;
       background-color: #fffaf0; /* Soft off-white */
       color: #444;
       line-height: 1.7;
-      font-size: 1.05 rem;
+      font-size: 1.05rem;
     }
 
-    /* Navigation Styles */
+    /* ---------- NAV: navy ribbon ---------- */
     nav {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
+      background: #0A2742; /* navy */
       padding: 0.8rem 1rem;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      border-bottom: none;
     }
 
+    /* Menu button */
     .menu-btn {
-      background: none;
+      background: #F4E3C1; /* beige */
+      color: #0A2742;      /* navy text */
       border: none;
-      color: #e65100; /* Dark orange */
-      font-size: 1.5rem;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-size: 1.05rem;
       font-weight: 700;
       cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+    }
+    .menu-btn:hover,
+    .menu-btn:focus-visible {
+      background: #FFD166; /* yellow hover */
+      color: #0A2742;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      outline: none;
     }
 
+    /* Dropdown menu links */
     .menu-links {
       display: none;
       flex-direction: column;
-      background: #fffaf0;
+      background: #F4E3C1; /* beige dropdown */
       position: absolute;
       top: 3.2rem;
       left: 0;
@@ -55,112 +73,124 @@
       padding: 0.5rem 0;
       text-align: center;
     }
-
+    .menu-links.show { display: flex; }
     .menu-links a {
       display: block;
       padding: 0.9rem 0;
       text-decoration: none;
-      color: #e65100; /* Dark orange */
+      color: #0A2742;
       font-weight: 600;
       font-size: 1.05rem;
     }
-
     .menu-links a:hover {
-      text-decoration: underline;
-      background-color: #fff3d0;
+      color: #FFD166;
+      background-color: transparent;
     }
 
-    .menu-links.show {
-      display: flex;
-    }
-
-    /* Header */
+    /* ---------- HEADER: navy with logo + scholarship name ---------- */
     header {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 3.5rem 1rem 2.5rem;
+      position: relative;
+      background: #0A2742; /* navy */
+      padding: 2.5rem 1rem;
       text-align: center;
     }
-
-    header h1 {
+    .header-center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .logo {
+      height: 200px;
+      width: auto;
+    }
+    .header-text h1,
+    .header-text h2 {
       font-family: 'Noto Serif Georgian', serif;
       margin: 0;
-      color: #2c2c2c;
+      color: #F9F7F4; /* off-white */
+    }
+    .header-text h1 { font-size: 3.8rem; margin-bottom: 0.3rem; }
+    .header-text h2 { font-size: 2.2rem; margin-top: 0.5rem; }
+
+    /* Page-specific title below logo */
+    .page-title {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .page-title h2 {
+      font-family: 'Noto Serif Georgian', serif;
+      font-size: 2.8rem;
+      color: #F9F7F4;
+      margin: 0;
     }
 
-    /* Main Content */
+    /* ---------- MAIN LAYOUT ---------- */
     main {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 4rem auto;
       padding: 0 2rem;
     }
-
     .section {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      margin-bottom: 5rem;
-      gap: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      margin-bottom: 3rem;
     }
-
     .section img {
       width: 100%;
-      max-width: 300px;
       height: auto;
-      border-radius: 10px;
-      border: 4px solid #ffa726; /* Orange border */
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-      flex: 1 1 30%;
+      border-radius: 12px;
+      display: block;
     }
-
-    .section .text {
-      flex: 1 1 60%;
-    }
-
-    .section h2 {
+    .section .text h2 {
       font-family: 'Noto Serif Georgian', serif;
-      font-size: 2.4rem;
-      color: #e65100; /* Dark orange */
-      margin-bottom: 1.2rem;
+      font-size: 2rem;
+      color: #D4A017; /* Gold */
+      margin: 0 0 0.75rem 0;
     }
-
-    .section:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    /* Footer */
-    footer {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #e65100;
-      margin-top: 2rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .menu-btn {
-        display: block;
-      }
-      .menu-links {
-        display: none;
-        flex-direction: column;
-      }
-      .menu-links.show {
-        display: flex;
-      }
+    @media (min-width: 900px) {
       .section {
-        flex-direction: column;
-        text-align: center;
-      }
-      .section img {
-        max-width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
       }
     }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: #0A2742;
+      color: #ffffff;
+      padding: 1.8rem 1rem;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-top: 2.5rem;
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    footer a {
+      color: #FFD166;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover { text-decoration: underline; }
+    .footer-logo {
+      height: 250px;
+      width: auto;
+      margin-bottom: 0;
+    }
+    footer::before,
+    footer::after { display: none; content: none; }
   </style>
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav>
     <button class="menu-btn" onclick="toggleMenu()">Menu</button>
     <div class="menu-links" id="menuLinks">
@@ -173,10 +203,23 @@
     </div>
   </nav>
 
+  <!-- HEADER -->
   <header>
-    <h1>Meet Jaki</h1>
+    <div class="header-center">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
+      <div class="header-text">
+        <h1>Jaki Gonzalez</h1>
+        <h2>Spirit of Excellence Scholarship</h2>
+      </div>
+    </div>
+
+    <!-- Page-specific title -->
+    <div class="page-title">
+      <h2>Meet Jaki</h2>
+    </div>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main>
     <div class="section">
       <img src="images/princetonacceptance.jpg" alt="Jaki grad">
@@ -186,44 +229,47 @@
       </div>
     </div>
 
-  <div class="section">
-  <img src="images/basketball1.JPG" alt="Jaki playing basketball">
-  <div class="text">
-    <h2>A Leader Beyond the Classroom</h2>
-    <p>
-      Jaki’s leadership extended well beyond academics. Whether mentoring her peers, lending a quiet word of encouragement, or leading on the basketball court, she embodied determination, teamwork, and grace. She was a role model for her classmates—a friend who uplifted others while setting the highest standards for herself.
-    </p>
-  </div>
-</div>
+    <div class="section">
+      <img src="images/basketball1.JPG" alt="Jaki playing basketball">
+      <div class="text">
+        <h2>A Leader Beyond the Classroom</h2>
+        <p>Jaki’s leadership extended well beyond academics. Whether mentoring her peers, lending a quiet word of encouragement, or leading on the basketball court, she embodied determination, teamwork, and grace. She was a role model for her classmates—a friend who uplifted others while setting the highest standards for herself.</p>
+      </div>
+    </div>
 
-<div class="section">
-  <img src="images/closeupgrad1.JPG" alt="Jaki at graduation">
-  <div class="text">
-    <h2>In Her Own Words</h2>
-    <p>
-      At her high school graduation, Jaki delivered a heartfelt speech that reminded her classmates that success is not a race but a personal journey. She believed that everyone’s path unfolds in its own time—whether through college, community work, or other meaningful endeavors. Her wisdom, courage, and deep compassion left a lasting impression on all who knew her.
-    </p>
-  </div>
-</div>
+    <div class="section">
+      <img src="images/closeupgrad1.JPG" alt="Jaki at graduation">
+      <div class="text">
+        <h2>In Her Own Words</h2>
+        <p>At her high school graduation, Jaki delivered a heartfelt speech that reminded her classmates that success is not a race but a personal journey. She believed that everyone’s path unfolds in its own time—whether through college, community work, or other meaningful endeavors. Her wisdom, courage, and deep compassion left a lasting impression on all who knew her.</p>
+      </div>
+    </div>
 
-<div class="section">
-  <img src="images/princeton2.jpg" alt="Jaki at Princeton">
-  <div class="text">
-    <h2>A Legacy of Excellence</h2>
-    <p>
-      Though Jaki’s life was tragically cut short, her legacy continues to shine. At Princeton, she thrived as part of the Freshman Scholars Institute and the Scholars Institute Fellows Program, where she guided and supported fellow students. Jaki was more than an extraordinary student—she was a symbol of hope and perseverance, proof that brilliance can emerge from even the most challenging circumstances. The Jaki Gonzalez Spirit of Excellence Scholarship honors her life, her achievements, and her enduring impact by supporting the next generation of students who, like Jaki, embody excellence, resilience, and a passion for learning.
-    </p>
-  </div>
-</div>
+    <div class="section">
+      <img src="images/princeton2.jpg" alt="Jaki at Princeton">
+      <div class="text">
+        <h2>A Legacy of Excellence</h2>
+        <p>Though Jaki’s life was tragically cut short, her legacy continues to shine. At Princeton, she thrived as part of the Freshman Scholars Institute and the Scholars Institute Fellows Program, where she guided and supported fellow students. Jaki was more than an extraordinary student—she was a symbol of hope and perseverance, proof that brilliance can emerge from even the most challenging circumstances. The Jaki Gonzalez Spirit of Excellence Scholarship honors her life, her achievements, and her enduring impact by supporting the next generation of students who, like Jaki, embody excellence, resilience, and a passion for learning.</p>
+      </div>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
+    <div class="footer-inner">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+      <p>A non-profit pending 501(c)(3) charity organization status</p>
+      <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
+      <p>PO Box 104 Harvard, IL 60033-9782</p>
+      <p>EIN: 39-3707357</p>
+      <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById('menuLinks').classList.toggle('show');
+      const menu = document.getElementById("menuLinks");
+      menu.classList.toggle("show");
     }
   </script>
 </body>
