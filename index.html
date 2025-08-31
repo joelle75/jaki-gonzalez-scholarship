@@ -25,87 +25,80 @@
     font-size: 1.05rem;
   }
 
-  /* ---------- NAV: off-white panel ---------- */
-  nav {
-    background: #fffaf0;                 /* off-white, not gradient */
-    padding: 0.8rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    border-bottom: 1px solid #f1ead6;    /* subtle divider */
-  }
+ /* ---------- NAV: navy ribbon ---------- */
+nav {
+  background: #0A2742;             /* navy */
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border-bottom: none;             /* remove old divider */
+}
 
-  /* Menu button styled as a real button (orange/white) */
-  .menu-btn {
-    background: #e65100;   /* brand orange */
-    color: #fff;           /* white text */
-    border: none;
-    padding: 0.55rem 1rem;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(230,81,0,0.25);
-    transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
-  }
-  .menu-btn:hover,
-  .menu-btn:focus-visible {
-    background: #c44200;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(230,81,0,0.28);
-    outline: none;
-  }
+/* Menu button */
+.menu-btn {
+  background: #F4E3C1;             /* beige */
+  color: #0A2742;                  /* navy text */
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+.menu-btn:hover,
+.menu-btn:focus-visible {
+  background: #FFD166;             /* yellow hover */
+  color: #0A2742;                  /* navy text remains readable */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  outline: none;
+}
 
-  .menu-links {
-    display: none;
-    flex-direction: column;
-    background: #fffaf0;  /* off-white dropdown */
-    position: absolute;
-    top: 3.2rem;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-    text-align: center;
-  }
-  .menu-links a {
-    display: block;
-    padding: 0.9rem 0;
-    text-decoration: none;
-    color: #e65100; /* Dark orange links */
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-  .menu-links a:hover {
-    text-decoration: underline;
-    background-color: #fff3d0;
-  }
-  .menu-links.show { display: flex; }
-
-  /* ---------- HEADER: pure lemon with soft edges ---------- */
-  /* Lemon yellow (no gradient) with fades to off-white on both edges */
-  header {
-    position: relative;
-    background: linear-gradient(
-    to bottom,
-      #fffaf0 0%,         /* Off-white top fade */
-      #ffcc33 15%,        /* Golden yellow start */
-      #ffcc33 85%,        /* Golden yellow hold */
-      #fffaf0 100%        /* Off-white bottom fade */
-  );
+ /* Dropdown menu links */
+.menu-links {
+  display: none;
+  flex-direction: column;
+  background: #F4E3C1;             /* beige dropdown */
+  position: absolute;
+  top: 3.2rem;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.menu-links a {
+  display: block;
+  padding: 0.9rem 0;
+  text-decoration: none;
+  color: #0A2742;                  /* navy links */
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.menu-links a:hover {
+  color: #FFD166;                  /* gold hover */
+  background-color: transparent;   /* keep clean background */
+}
+/* ---------- HEADER: solid beige (no gradient) ---------- */
+header {
+  position: relative;
+  background: #F4E3C1;             /* solid beige */
   padding: 3.5rem 1rem 2.5rem;
   text-align: center;
 }
 
-  header h1,
-  header h2 {
-    font-family: 'Noto Serif Georgian', serif;
-    margin: 0;
-    color: #2c2c2c;
-  }
-  header h1 { font-size: 3.8rem; margin-bottom: 0.3rem; }
-  header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
+header h1,
+header h2 {
+  font-family: 'Noto Serif Georgian', serif;
+  margin: 0;
+  color: #0A2742;                  /* navy text for titles */
+}
+header h1 { font-size: 3.8rem; margin-bottom: 0.3rem; }
+header h2 { font-size: 2.2rem; margin-top: 0.5rem; }
 
   /* Main */
   main {
