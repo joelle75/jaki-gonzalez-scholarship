@@ -222,6 +222,77 @@ footer a:hover { text-decoration: underline; }
 /* REMOVE old gradient edges */
 footer::before,
 footer::after { display: none; content: none; }
+
+/* ---------- Global fluid elements ---------- */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+html { scroll-behavior: smooth; }
+
+/* Fluid typography for big titles */
+.header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+.header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
+/* If you have a page title outside header */
+.page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
+
+/* ---------- Mobile / small tablets ---------- */
+@media (max-width: 768px) {
+  /* Header: stack logo above text, center everything */
+  .header-center {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+  .logo {
+    height: clamp(120px, 24vw, 160px);
+  }
+
+  /* Navigation: keep menu button visible; dropdown spans screen */
+  nav { padding: 0.6rem 0.8rem; }
+  .menu-links {
+    position: static;   /* let it push content down instead of overlay */
+    width: 100%;
+    box-shadow: none;
+    padding: 0;
+  }
+  .menu-links a {
+    padding: 0.8rem 0;
+    border-top: 1px solid rgba(10,39,66,0.1);
+  }
+
+  /* Main content spacing */
+  main {
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Sections are already one-column by default; keep text centered */
+  .section { gap: 1rem; }
+  .section .text { padding: 0 0.25rem; }
+
+  /* Images: keep your gold border but reduce radius a bit on tiny screens */
+  .section img {
+    border-width: 10px;     /* your gold border stays */
+    border-radius: 10px;
+  }
+
+  /* Donate button full width-ish */
+  .donate-button {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* Footer: reduce logo size and padding */
+  footer { padding: 1.2rem 1rem; }
+  .footer-logo { height: 140px; }
+}
+
+/* ---------- Medium screens (tablets/landscape) ---------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo { height: 180px; }
+  main { padding: 0 1.5rem; }
+}  
 </style>
 </head>
 <body>
