@@ -1,0 +1,27 @@
+ <nav>
+  <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+  <div class="menu-links" id="menuLinks">
+    <a href="{{ site.baseurl }}/index.html">Our Mission</a>
+    <a href="{{ site.baseurl }}/jaki.html">Meet Jaki</a>
+    <a href="{{ site.baseurl }}/awardrecipients.html">Award Recipients</a>
+    <a href="{{ site.baseurl }}/team.html">Meet the Committee</a>
+    <a href="{{ site.baseurl }}/contact.html">Contact Us</a>
+    <a href="{{ site.baseurl }}/applicationresources.html">Application Resources</a>
+  </div>
+</nav>
+
+<header>
+  <div class="header-center">
+    <img src="{{ site.baseurl }}/images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
+    <div class="header-text">
+      <h1>Jaki Gonzalez</h1>
+      <h2>Spirit of Excellence Scholarship</h2>
+    </div>
+  </div>
+</header>
+
+{% if page.page_title %}
+<div class="page-title">
+  <h2>{{ page.page_title }}</h2>
+</div>
+{% endif %}
