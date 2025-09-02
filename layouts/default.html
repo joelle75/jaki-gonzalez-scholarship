@@ -13,11 +13,21 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css" />
-
-  <!-- Favicons (optional; adjust paths if you used a generator) -->
-  <!-- <link rel="icon" href="{{ site.baseurl }}/favicon-32x32.png" sizes="32x32"> -->
 </head>
 <body>
+
+  <!-- NAV (Option B: direct .html links) -->
+  <nav>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="{{ site.baseurl }}/index.html">Our Mission</a>
+      <a href="{{ site.baseurl }}/jaki.html">Meet Jaki</a>
+      <a href="{{ site.baseurl }}/awardrecipients.html">Award Recipients</a>
+      <a href="{{ site.baseurl }}/team.html">Meet the Committee</a>
+      <a href="{{ site.baseurl }}/contact.html">Contact Us</a>
+      <a href="{{ site.baseurl }}/applicationresources.html">Application Resources</a>
+    </div>
+  </nav>
 
   {% include header.html %}
 
@@ -28,5 +38,14 @@
   {% include footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+  <!-- Fallback: if toggleMenu isn't defined in main.js -->
+  <script>
+    if (typeof toggleMenu === "undefined") {
+      function toggleMenu() {
+        var menu = document.getElementById("menuLinks");
+        if (menu) menu.classList.toggle("show");
+      }
+    }
+  </script>
 </body>
 </html>
