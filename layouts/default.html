@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="{{ site.description }}"/>
+  <meta property="og:title" content="{{ site.title }}"/>
+  <meta property="og:description" content="{{ site.description }}"/>
+  <meta property="og:image" content="{{ site.baseurl }}/images/fullgrad.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/site.css" />
+
+  <!-- Favicons (optional; adjust paths if you used a generator) -->
+  <!-- <link rel="icon" href="{{ site.baseurl }}/favicon-32x32.png" sizes="32x32"> -->
+</head>
+<body>
+
+  {% include header.html %}
+
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+</body>
+</html>
