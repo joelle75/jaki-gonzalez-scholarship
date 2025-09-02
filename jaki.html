@@ -4,6 +4,53 @@ title: Meet Jaki
 page_title: Meet Jaki
 ---
 
+<!-- Page-scoped CSS: Meet Jaki only -->
+<style>
+  /* Section layout: image + text, centered together */
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    margin-bottom: 3rem;
+  }
+  .section .media,
+  .section .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* center the text with its image */
+  }
+
+  /* Images: 10px gold border + rounded corners */
+  .section img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    border: 10px solid #D4A017;
+  }
+
+  /* Headings within sections */
+  .section .text h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2rem;
+    color: #D4A017;
+    margin: 0.75rem 0 0.5rem 0;
+  }
+
+  /* Alternate the layout on wider screens (image/text swap every other section) */
+  @media (min-width: 900px) {
+    .section {
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+    /* even sections: reverse columns so images/text alternate sides */
+    .section:nth-of-type(even) .media { order: 2; }
+    .section:nth-of-type(even) .text  { order: 1; }
+  }
+</style>
+
 <!-- MAIN CONTENT ONLY -->
 <!-- Section 1 (image left on desktop) -->
 <div class="section">
