@@ -4,6 +4,98 @@ title: Meet the Committee
 page_title: Meet the Committee
 ---
 
+<!-- Page-scoped CSS (Team only) -->
+<style>
+  /* Section title + centered intro */
+  h2.section-title {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2rem;
+    color: #D4A017; /* gold */
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
+  p.center {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto 1rem;
+    max-width: 900px;
+  }
+
+  /* Family gallery */
+  .family-gallery {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+  .family-gallery img {
+    flex: 1 1 300px;
+    max-width: 480px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+
+  /* Committee grid / member cards */
+  .committee-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+  .member {
+    flex: 1 1 250px;
+    max-width: 300px;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid rgba(10,39,66,0.08);
+  }
+  .member img {
+    width: 100%;
+    max-width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 auto 0.75rem;
+    display: block;
+  }
+  .member h3 {
+    margin: 0.25rem 0 0.25rem;
+    font-size: 1.2rem;
+    color: #D4A017; /* gold */
+  }
+  .member .role {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 0 0.5rem;
+  }
+  .member .intro {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    margin: 0.25rem 0 0;
+  }
+
+  /* Optional utility for gold frame (use class="gold-frame" on any img) */
+  .gold-frame { border: 10px solid #D4A017; border-radius: 10px; }
+
+  /* Small-screen tweaks */
+  @media (max-width: 640px) {
+    .family-gallery { gap: 0.75rem; }
+    .member { max-width: 100%; }
+  }
+</style>
+
 <main>
   <section class="family-section">
     <h2 class="section-title">Jaki’s Family</h2>
