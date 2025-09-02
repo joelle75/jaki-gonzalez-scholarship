@@ -1,0 +1,9 @@
+title: "Jaki Gonzalez Spirit of Excellence Scholarship"
+description: "Honoring Jaki Gonzalez by supporting Harvard High School seniors who embody excellence, resilience, and learning."
+url: "https://<your-username>.github.io"   # <-- update with your GH Pages URL
+baseurl: ""                                 # if your site is a project page, set to "/your-repo-name"
+markdown: kramdown
+theme: null
+permalink: pretty
+exclude:
+  - README.md
