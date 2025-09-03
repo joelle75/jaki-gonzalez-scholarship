@@ -85,7 +85,7 @@ nav {
   background-color: transparent;
 }
 
-/* Add this new style */
+/* nav-donate-button */
 .nav-donate-btn {
   background-color: #F77F00;   /* orange */
   color: #F9F7F4;              /* white text */
@@ -300,10 +300,18 @@ html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
   }
   .section { gap: 3rem; }
   .section .text { padding: 0 0.25rem; }
+  
+  /* Fix image + border alignment */
   .section img {
-    border-width: 10px;
+    display: block;               /* removes inline gaps */
+    margin: 0 auto;               /* centers image + border */
+    border: 15px solid #FFD166;   /* keep gold border */
     border-radius: 10px;
+    max-width: calc(100% - 30px); /* account for both left+right borders */
+    height: auto;
+    box-sizing: border-box;       /* ensures border counts toward total width */
   }
+
   .donate-button {
     width: 100%;
     max-width: 200px;
