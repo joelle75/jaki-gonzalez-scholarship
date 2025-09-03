@@ -3,114 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="The Jaki Gonzalez Spirit of Excellence Scholarship honors Jaki Gonzalez's legacy by supporting exceptional Harvard High School seniors pursuing higher education."/>
-  <meta name="keywords" content="Jaki Gonzalez Scholarship, Harvard High School, Spirit of Excellence, scholarship, education, Princeton University"/>
+  <meta name="description" content="Application resources for the Jaki Gonzalez Spirit of Excellence Scholarship—deadlines, eligibility, tips, and downloadable templates."/>
+  <meta name="keywords" content="Jaki Gonzalez Scholarship, application, resources, eligibility, deadlines, Harvard High School"/>
   <meta name="author" content="The Jaki Gonzalez Spirit of Excellence Scholarship Committee"/>
-  <meta property="og:title" content="The Jaki Gonzalez Spirit of Excellence Scholarship"/>
-  <meta property="og:description" content="Honoring Jaki Gonzalez by supporting Harvard High School seniors who embody excellence, resilience, and learning."/>
+  <meta property="og:title" content="Application Resources | The Jaki Gonzalez Spirit of Excellence Scholarship"/>
+  <meta property="og:description" content="Everything you need to apply: key dates, eligibility, checklists, and templates."/>
   <meta property="og:image" content="images/fullgrad.jpg"/>
   <meta property="og:type" content="website"/>
   <meta name="robots" content="index, follow">
-  <title>Application Resources | Jaki Gonzalez Scholarship</title>
-  <!-- Import Google Fonts -->
+  <title>Application Resources | The Jaki Gonzalez Spirit of Excellence Scholarship</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica', sans-serif;
-      background-color: #fffaf0; /* Soft off-white */
-      color: #444;
-    }
+  /* ==================== GLOBAL (copied from home page) ==================== */
+  body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fffaf0; /* Soft off-white */
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
 
-    /* Navigation Styles */
-    nav {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 0.5rem 1rem;
-      position: relative;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
+  /* NAV */
+  nav {
+    background: #0A2742;             /* navy */
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border-bottom: none;
+  }
+  .menu-btn {
+    background: #F4E3C1;             /* beige */
+    color: #0A2742;                  /* navy text */
+    border: none;
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+  }
+  .menu-btn:hover, .menu-btn:focus-visible {
+    background: #FFD166;             /* yellow hover */
+    color: #0A2742;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    outline: none;
+  }
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background: #F4E3C1;             /* beige dropdown */
+    position: absolute;
+    top: 3.2rem;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .menu-links.show { display: flex; }
+  .menu-links a {
+    display: block;
+    padding: 0.9rem 0;
+    text-decoration: none;
+    color: #0A2742;                  /* navy links */
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .menu-links a:hover {
+    color: #FFD166;                  /* gold hover */
+    background-color: transparent;
+  }
 
-    .menu-btn {
-      background: none;
-      border: none;
-      color: #e65100;
-      font-size: 1.2rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
+  /* HEADER (home page style) */
+  header {
+    position: relative;
+    background: #0A2742;             /* navy */
+    padding: 2.0rem 1rem 1.5rem;
+    text-align: left;
+  }
+  .header-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;          /* center horizontally */
+    gap: 1rem;                        /* space between logo and text */
+  }
+  .logo { height: 250px; width: auto; }
+  .header-text h1,
+  .header-text h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    margin: 0;
+    color: #F9F7F4;                  /* off-white text */
+  }
+  .header-text h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
+  .header-text h2 { font-size: 3.2rem; margin-top: 0.5rem; }
 
-    .menu-links {
-      display: none;
+  /* Page title under header */
+  .page-title {
+    text-align: center;
+    padding: 1.75rem 1rem 0.5rem;
+  }
+  .page-title h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2.8rem;
+    color: #0A2742; /* navy text */
+    margin: 0;
+  }
+
+  /* MAIN WRAPPER */
+  main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+
+  /* FOOTER (home page style) */
+  footer {
+    background: #0A2742;   /* navy */
+    color: #ffffff;        /* white text */
+    padding: 1.80rem 1rem; /* bigger footer */
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 2.5rem;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  footer a {
+    color: #FFD166;              /* gold/yellow accent */
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer a:hover { text-decoration: underline; }
+  .footer-logo {
+    height: 250px;
+    width: auto;
+    margin-bottom: 0rem;
+  }
+
+  /* Global helpers */
+  img, video { max-width: 100%; height: auto; }
+  html { scroll-behavior: smooth; }
+  .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+  .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
+  .page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
+
+  /* Mobile tweaks */
+  @media (max-width: 768px) {
+    .header-center {
       flex-direction: column;
-      background: #fffaf0;
-      position: absolute;
-      top: 3rem;
-      left: 0;
+      text-align: center;
+      gap: 0.75rem;
+    }
+    .logo { height: clamp(120px, 24vw, 160px); }
+
+    nav { padding: 0.6rem 0.8rem; }
+    .menu-links {
+      position: static;   /* push content down */
       width: 100%;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      padding: 0.5rem 0;
-      text-align: center;
+      box-shadow: none;
+      padding: 0;
     }
-
     .menu-links a {
-      display: block;
       padding: 0.8rem 0;
-      text-decoration: none;
-      color: #e65100; /* Dark orange */
-      font-weight: 600;
-      font-size: 1rem;
+      border-top: 1px solid rgba(10,39,66,0.1);
     }
 
-    .menu-links a:hover {
-      text-decoration: underline;
-      background-color: #fff3d0;
-    }
+    main { margin: 2rem auto; padding: 0 1rem; }
+    footer { padding: 1.2rem 1rem; }
+    .footer-logo { height: 140px; }
+  }
 
-    .menu-links.show {
-      display: flex;
-    }
+  /* ==================== APPLICATION RESOURCES – PAGE-SCOPED STYLES ==================== */
 
-    /* Header */
-    header {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 3rem 1rem 2rem;
-      text-align: center;
-    }
+  /* Intro copy */
+  .resources-intro {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+  }
 
-    header h1 {
-      font-family: 'Noto Serif Georgian', serif;
-      font-size: 3.6rem;
-      margin: 0;
-      color: #2c2c2c;
-    }
+  /* Quick info strip */
+  .quick-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem auto 2.5rem;
+  }
+  .quick-card {
+    background: #fff;
+    border: 1px solid rgba(10,39,66,0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+  }
+  .quick-card h3 {
+    margin: 0 0 0.35rem;
+    font-family: 'Noto Serif Georgian', serif;
+    color: #D4A017;
+    font-size: 1.35rem;
+  }
+  .quick-card p { margin: 0.25rem 0 0; }
 
-    /* Main Content */
-    main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
+  @media (min-width: 800px) {
+    .quick-info { grid-template-columns: repeat(3, 1fr); }
+  }
 
-    h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      font-size: 2rem;
-      color: #e65100;
-      text-align: center;
-    }
+  /* Resource cards grid */
+  .resources-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 780px) {
+    .resources-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  .resource-card {
+    background: #fff;
+    border: 1px solid rgba(10,39,66,0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    padding: 1.25rem 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .resource-card h3 {
+    margin: 0 0 0.25rem;
+    font-family: 'Noto Serif Georgian', serif;
+    color: #0A2742;
+    font-size: 1.2rem;
+  }
+  .resource-card p { margin: 0; }
+  .resource-actions {
+    margin-top: 0.75rem;
+  }
+  .btn-link {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(230,81,0,0.15);
+    transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .btn-primary {
+    background-color: #F77F00;
+    color: #F9F7F4;
+  }
+  .btn-primary:hover {
+    background-color: #FFD166; color: #0A2742; transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(230,81,0,0.25);
+  }
+  .btn-ghost {
+    background: #fff;
+    color: #0A2742;
+    border-color: rgba(10,39,66,0.14);
+  }
+  .btn-ghost:hover {
+    background: #FFF4D6; border-color: #FFD166; transform: translateY(-1px);
+  }
 
-    /* Footer */
-    footer {
-      background: linear-gradient(90deg, #ffa726, #fff176, #ffa726);
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #e65100;
-      margin-top: 2rem;
-    }
+  /* Section titles */
+  .section-title {
+    text-align: center;
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2rem;
+    color: #D4A017;
+    margin: 0 0 1rem;
+  }
   </style>
 </head>
 <body>
 
+  <!-- NAV -->
   <nav>
     <button class="menu-btn" onclick="toggleMenu()">Menu</button>
     <div class="menu-links" id="menuLinks">
@@ -123,23 +304,118 @@
     </div>
   </nav>
 
+  <!-- HEADER -->
   <header>
-    <h1>Application Resources</h1>
+    <div class="header-center">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
+      <div class="header-text">
+        <h1>Jaki Gonzalez</h1>
+        <h2>Spirit of Excellence Scholarship</h2>
+      </div>
+    </div>
   </header>
 
+  <!-- PAGE TITLE -->
+  <div class="page-title">
+    <h2>Application Resources</h2>
+  </div>
+
+  <!-- MAIN -->
   <main>
-    <section style="text-align: center; margin: 5rem 0;">
-      <h2>Application resources will be posted near the end of 2025. Please reach out with any questions in the meantime.</h2>
+    <p class="resources-intro">
+      Everything you need to apply—deadlines, eligibility, and helpful templates. Review the quick info below, then
+      use the resources to prepare a strong application.
+    </p>
+
+    <!-- Quick Info -->
+    <section class="quick-info">
+      <div class="quick-card">
+        <h3>Deadline</h3>
+        <p><strong>March 15</strong> at 11:59 PM CT</p>
+      </div>
+      <div class="quick-card">
+        <h3>Eligibility</h3>
+        <p>Harvard High School seniors who embody excellence, resilience, and learning.</p>
+      </div>
+      <div class="quick-card">
+        <h3>Questions?</h3>
+        <p><a href="contact.html">Contact the committee</a></p>
+      </div>
+    </section>
+
+    <!-- Resources Grid -->
+    <section>
+      <h3 class="section-title">Guides & Templates</h3>
+      <div class="resources-grid">
+        <article class="resource-card">
+          <h3>Application Checklist</h3>
+          <p>Step-by-step list to keep you on track—from transcripts to essays.</p>
+          <div class="resource-actions">
+            <a class="btn-link btn-primary" href="docs/JGSES_Application_Checklist.pdf" target="_blank" rel="noopener">Download PDF</a>
+            <a class="btn-link btn-ghost" href="docs/JGSES_Application_Checklist.docx">Word Version</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <h3>Essay Prompts & Tips</h3>
+          <p>Prompts plus guidance on structure, voice, and revision.</p>
+          <div class="resource-actions">
+            <a class="btn-link btn-primary" href="docs/JGSES_Essay_Prompts.pdf" target="_blank" rel="noopener">View Prompts</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <h3>Recommendation Guide</h3>
+          <p>How to choose recommenders and what to share with them.</p>
+          <div class="resource-actions">
+            <a class="btn-link btn-primary" href="docs/JGSES_Rec_Guide.pdf" target="_blank" rel="noopener">Download Guide</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <h3>Resume Template</h3>
+          <p>A clean, one-page template for activities, leadership, and awards.</p>
+          <div class="resource-actions">
+            <a class="btn-link btn-primary" href="docs/JGSES_Resume_Template.docx">Download .docx</a>
+            <a class="btn-link btn-ghost" href="docs/JGSES_Resume_Template.pdf" target="_blank" rel="noopener">Preview PDF</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <h3>Financial Aid Snapshot</h3>
+          <p>Optional: summarize your financial context for context-setting.</p>
+          <div class="resource-actions">
+            <a class="btn-link btn-primary" href="docs/JGSES_FinAid_Snapshot.pdf" target="_blank" rel="noopener">Download PDF</a>
+          </div>
+        </article>
+
+        <article class="resource-card">
+          <h3>FAQs</h3>
+          <p>Answers to common questions about requirements, timing, and selection.</p>
+          <div class="resource-actions">
+            <a class="btn-link btn-primary" href="docs/JGSES_FAQ.pdf" target="_blank" rel="noopener">Read FAQs</a>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
+    <div class="footer-inner">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+      <p>A non-profit pending 501(c)(3) charity organization status</p>
+      <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
+      <p>PO Box 104 Harvard, IL 60033-9782</p>
+      <p>EIN: 39-3707357</p>
+      <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
     function toggleMenu() {
-      document.getElementById('menuLinks').classList.toggle('show');
+      const menu = document.getElementById("menuLinks");
+      menu.classList.toggle("show");
     }
   </script>
 </body>
