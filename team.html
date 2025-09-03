@@ -1,12 +1,191 @@
----
-layout: default
-title: Meet the Committee
-page_title: Meet the Committee
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="The Jaki Gonzalez Spirit of Excellence Scholarship honors Jaki Gonzalez's legacy by supporting exceptional Harvard High School seniors pursuing higher education."/>
+  <meta name="keywords" content="Jaki Gonzalez Scholarship, Harvard High School, Spirit of Excellence, scholarship, education, Princeton University"/>
+  <meta name="author" content="The Jaki Gonzalez Spirit of Excellence Scholarship Committee"/>
+  <meta property="og:title" content="Meet the Committee | The Jaki Gonzalez Spirit of Excellence Scholarship"/>
+  <meta property="og:description" content="Honoring Jaki Gonzalez by supporting Harvard High School seniors who embody excellence, resilience, and learning."/>
+  <meta property="og:image" content="images/fullgrad.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow">
+  <title>Meet the Committee | The Jaki Gonzalez Spirit of Excellence Scholarship</title>
 
-<!-- Page-scoped CSS (Team only) -->
-<style>
-  /* Section title + centered intro */
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+  /* ==================== GLOBAL (copied from home page) ==================== */
+  body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fffaf0; /* Soft off-white */
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+  /* NAV */
+  nav {
+    background: #0A2742;             /* navy */
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    border-bottom: none;
+  }
+  .menu-btn {
+    background: #F4E3C1;             /* beige */
+    color: #0A2742;                  /* navy text */
+    border: none;
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+  }
+  .menu-btn:hover, .menu-btn:focus-visible {
+    background: #FFD166;             /* yellow hover */
+    color: #0A2742;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    outline: none;
+  }
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background: #F4E3C1;             /* beige dropdown */
+    position: absolute;
+    top: 3.2rem;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+  .menu-links.show { display: flex; }
+  .menu-links a {
+    display: block;
+    padding: 0.9rem 0;
+    text-decoration: none;
+    color: #0A2742;                  /* navy links */
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .menu-links a:hover {
+    color: #FFD166;                  /* gold hover */
+    background-color: transparent;
+  }
+
+  /* HEADER (home page style) */
+  header {
+    position: relative;
+    background: #0A2742;             /* navy */
+    padding: 2.0rem 1rem 1.5rem;
+    text-align: left;                 /* left-align overall */
+  }
+  .header-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;          /* center horizontally */
+    gap: 1rem;                        /* space between logo and text */
+  }
+  .logo { height: 250px; width: auto; }
+  .header-text h1,
+  .header-text h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    margin: 0;
+    color: #F9F7F4;                  /* off-white text */
+  }
+  .header-text h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
+  .header-text h2 { font-size: 3.2rem; margin-top: 0.5rem; }
+
+  /* Page title under header */
+  .page-title {
+    text-align: center;
+    padding: 1.75rem 1rem 0.5rem;
+  }
+  .page-title h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2.8rem;
+    color: #0A2742; /* navy text */
+    margin: 0;
+  }
+
+  /* MAIN WRAPPER */
+  main {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+  }
+
+  /* FOOTER (home page style) */
+  footer {
+    background: #0A2742;   /* navy */
+    color: #ffffff;        /* white text */
+    padding: 1.80rem 1rem; /* bigger footer */
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 2.5rem;
+  }
+  .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  footer a {
+    color: #FFD166;              /* gold/yellow accent */
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer a:hover { text-decoration: underline; }
+  .footer-logo {
+    height: 250px;
+    width: auto;
+    margin-bottom: 0rem;
+  }
+
+  /* Global helpers */
+  img, video { max-width: 100%; height: auto; }
+  html { scroll-behavior: smooth; }
+  .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+  .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
+  .page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
+
+  /* Mobile tweaks */
+  @media (max-width: 768px) {
+    .header-center {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.75rem;
+    }
+    .logo { height: clamp(120px, 24vw, 160px); }
+
+    nav { padding: 0.6rem 0.8rem; }
+    .menu-links {
+      position: static;   /* push content down */
+      width: 100%;
+      box-shadow: none;
+      padding: 0;
+    }
+    .menu-links a {
+      padding: 0.8rem 0;
+      border-top: 1px solid rgba(10,39,66,0.1);
+    }
+
+    main { margin: 2rem auto; padding: 0 1rem; }
+    footer { padding: 1.2rem 1rem; }
+    .footer-logo { height: 140px; }
+  }
+
+  /* ==================== TEAM PAGE-SCOPED STYLES ==================== */
   h2.section-title {
     font-family: 'Noto Serif Georgian', serif;
     font-size: 2rem;
@@ -14,6 +193,7 @@ page_title: Meet the Committee
     margin: 0 0 1rem 0;
     text-align: center;
   }
+
   p.center {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -41,7 +221,7 @@ page_title: Meet the Committee
     object-fit: cover;
   }
 
-  /* Committee grid / member cards */
+  /* Committee grid */
   .committee-grid {
     display: flex;
     flex-wrap: wrap;
@@ -86,50 +266,100 @@ page_title: Meet the Committee
     margin: 0.25rem 0 0;
   }
 
-  /* Optional utility for gold frame (use class="gold-frame" on any img) */
-  .gold-frame { border: 10px solid #D4A017; border-radius: 10px; }
-
-  /* Small-screen tweaks */
+  /* Small-screen tweak */
   @media (max-width: 640px) {
     .family-gallery { gap: 0.75rem; }
     .member { max-width: 100%; }
   }
-</style>
+  </style>
+</head>
+<body>
 
-<main>
-  <section class="family-section">
-    <h2 class="section-title">Jaki’s Family</h2>
-    <p class="center">
-      Jaki and her family are the heart of this scholarship. Their strength, love, and dedication to honoring her legacy inspire every aspect of our work. They remain at the core of the selection process and continue to shape the values that guide this scholarship.
-    </p>
-
-    <div class="family-gallery">
-      <img src="images/IMG_4778.jpg" alt="Family photo 1">
-      <img src="images/img_3476.JPG" alt="Family photo 2">
+  <!-- NAV -->
+  <nav>
+    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Our Mission</a>
+      <a href="jaki.html">Meet Jaki</a>
+      <a href="awardrecipients.html">Award Recipients</a>
+      <a href="team.html">Meet the Committee</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="applicationresources.html">Application Resources</a>
     </div>
-  </section>
+  </nav>
 
-  <section class="committee-section">
-    <h2 class="section-title">Scholarship Committee</h2>
-    <div class="committee-grid">
-      <div class="member">
-        <img src="images/IWU-114.jpg" alt="Joelle McMillan">
-        <h3>Joelle McMillan</h3>
-        <p class="role">Founder, Committee Member</p>
-        <p class="intro">(information pending)</p>
-      </div>
-      <div class="member">
-        <img src="images/melany.jpg" alt="Melany Avila">
-        <h3>Melany Avila</h3>
-        <p class="role">Committee Member</p>
-        <p class="intro">(information pending)</p>
-      </div>
-      <div class="member">
-        <img src="images/kerrigan.jpg" alt="Kerrigan Kotecki">
-        <h3>Kerrigan Kotecki</h3>
-        <p class="role">Committee Member</p>
-        <p class="intro">(information pending)</p>
+  <!-- HEADER -->
+  <header>
+    <div class="header-center">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
+      <div class="header-text">
+        <h1>Jaki Gonzalez</h1>
+        <h2>Spirit of Excellence Scholarship</h2>
       </div>
     </div>
-  </section>
-</main>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <div class="page-title">
+    <h2>Meet the Committee</h2>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+    <section class="family-section">
+      <h2 class="section-title">Jaki’s Family</h2>
+      <p class="center">
+        Jaki and her family are the heart of this scholarship. Their strength, love, and dedication to honoring her legacy inspire every aspect of our work. They remain at the core of the selection process and continue to shape the values that guide this scholarship.
+      </p>
+
+      <div class="family-gallery">
+        <img src="images/IMG_4778.jpg" alt="Family photo 1">
+        <img src="images/img_3476.JPG" alt="Family photo 2">
+      </div>
+    </section>
+
+    <section class="committee-section">
+      <h2 class="section-title">Scholarship Committee</h2>
+      <div class="committee-grid">
+        <div class="member">
+          <img src="images/IWU-114.jpg" alt="Joelle McMillan">
+          <h3>Joelle McMillan</h3>
+          <p class="role">Founder, Committee Member</p>
+          <p class="intro">(information pending)</p>
+        </div>
+        <div class="member">
+          <img src="images/melany.jpg" alt="Melany Avila">
+          <h3>Melany Avila</h3>
+          <p class="role">Committee Member</p>
+          <p class="intro">(information pending)</p>
+        </div>
+        <div class="member">
+          <img src="images/kerrigan.jpg" alt="Kerrigan Kotecki">
+          <h3>Kerrigan Kotecki</h3>
+          <p class="role">Committee Member</p>
+          <p class="intro">(information pending)</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+      <p>A non-profit pending 501(c)(3) charity organization status</p>
+      <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
+      <p>PO Box 104 Harvard, IL 60033-9782</p>
+      <p>EIN: 39-3707357</p>
+      <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuLinks");
+      menu.classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
