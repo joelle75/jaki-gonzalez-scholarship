@@ -158,14 +158,14 @@ header {
   .donate-button {
     display: block;
     background-color: #F77F00;  /* orange */
-    color: #F9F7F4;                /* white text */
+    color: #F9F7F4;
     font-weight: 700;
     text-align: center;
-    padding: 0.9rem 1.8rem;
+    padding: 0.7rem 1.2rem;   /* reduced padding */
     border-radius: 8px;
     text-decoration: none;
     margin: 1.5rem auto 0;
-    max-width: 300px;
+    max-width: 200px;         /* narrower max-width */
     border: 2px solid transparent;
     box-shadow: 0 2px 8px rgba(230,81,0,0.25);
     transition: background-color .25s ease, transform .15s ease, box-shadow .2s ease, border-color .2s ease;
@@ -187,7 +187,9 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  /* ---------- FOOTER: solid navy, larger, white text ---------- */
+    
+ 
+    /* ---------- FOOTER: solid navy, larger, white text ---------- */
 footer {
   background: #0A2742;   /* navy */
   color: #ffffff;        /* white text */
@@ -310,13 +312,16 @@ html { scroll-behavior: smooth; }
   </nav>
 
   <header>
-  <div class="header-center">
-    <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
-    <div class="header-text">
-      <h1>Jaki Gonzalez</h1>
-      <h2>Spirit of Excellence Scholarship</h2>
+    <div class="header-center">
+      <div class="logo-container">
+        <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
+        <span class="tm">TM</span>
+      </div>
+      <div class="header-text">
+        <h1>Jaki Gonzalez</h1>
+        <h2>Spirit of Excellence Scholarship</h2>
+      </div>
     </div>
-  </div>
   </header>
 
   <main>
@@ -333,25 +338,19 @@ html { scroll-behavior: smooth; }
       </div>
     </section>
   </main>
-
-<footer>
-  <div class="footer-inner">
-    <img src="images/JGSES_logo_w_off-white_book-removebg.png" 
-         alt="JGSES Logo" 
-         class="footer-logo">
-
-    <p>A non-profit pending 501(c)(3) charity organization status</p>
-    <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
-    <p>PO Box 104 Harvard, IL 60033-9782</p>
-    <p>EIN: 39-3707357</p>
-    <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
-  </div>
-</footer>  
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("menuLinks");
-    menu.classList.toggle("show");
-  }
-</script>
+ 
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo-container">
+        <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+        <span class="tm">TM</span>
+      </div>
+      <p>A non-profit pending 501(c)(3) charity organization status</p>
+      <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
+      <p>PO Box 104 Harvard, IL 60033-9782</p>
+      <p>EIN: 39-3707357</p>
+      <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
