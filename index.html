@@ -278,11 +278,19 @@ html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
   .header-center {
     flex-direction: column;
     text-align: center;
-    gap: 0.75rem;
+    gap: 1rem;                     /* more breathing room */
+    max-width: 95%;                /* container a bit wider */
+    margin: 0 auto;
   }
   .logo {
-    height: clamp(140px, 28vw, 1800px);
+    height: clamp(160px, 32vw, 220px); /* slightly larger logo */
   }
+  .header-text h1,
+  .header-text h2 {
+    max-width: 95%;                /* headings scale with container */
+    margin: 0 auto;
+  }
+
   nav { padding: 0.6rem 0.8rem; }
   .menu-links {
     position: static;
@@ -298,18 +306,18 @@ html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
     margin: 2rem auto;
     padding: 1rem;  
   }
-  .section { gap: 3rem; }
+  .section { gap: 2.5rem; }         /* tighten spacing slightly */
   .section .text { padding: 0 0.25rem; }
   
   /* Fix image + border alignment */
   .section img {
-    display: block;               /* removes inline gaps */
-    margin: 0 auto;               /* centers image + border */
-    border: 15px solid #FFD166;   /* keep gold border */
+    display: block;
+    margin: 0 auto;
+    border: 15px solid #FFD166;
     border-radius: 10px;
-    max-width: calc(100% - 30px); /* account for both left+right borders */
+    max-width: calc(90% - 30px);    /* make images ~10% smaller */
     height: auto;
-    box-sizing: border-box;       /* ensures border counts toward total width */
+    box-sizing: border-box;
   }
 
   .donate-button {
@@ -317,7 +325,7 @@ html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
     max-width: 200px;
   }
   footer { padding: 1.2rem 1rem; }
-  .footer-logo { height: 140px; }
+  .footer-logo { height: 150px; }   /* slightly bigger footer logo */
 }
 
 /* ---------- Medium screens ---------- */
