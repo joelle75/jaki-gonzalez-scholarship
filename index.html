@@ -85,6 +85,29 @@ nav {
   background-color: transparent;
 }
 
+/* Add this new style */
+.nav-donate-btn {
+  background-color: #F77F00;   /* orange */
+  color: #F9F7F4;              /* white text */
+  font-weight: 700;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 0.75rem;        /* space between Menu and Donate */
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(230,81,0,0.25);
+  transition: background-color .25s ease, transform .15s ease, box-shadow .2s ease;
+}
+.nav-donate-btn:hover,
+.nav-donate-btn:focus-visible {
+  background-color: #FFD166;   /* gold hover */
+  color: #0A2742;              /* navy text */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(230,81,0,0.2);
+  outline: none;
+}
+    
 /* ---------- HEADER ---------- */
 header {
   position: relative;
@@ -298,7 +321,8 @@ html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
 <body>
 
   <nav>
-    <button class="menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-controls="menuLinks">Menu</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-controls="menuLinks">MENU</button>
+    <a href="#" class="nav-donate-btn">DONATE</a>
     <div class="menu-links" id="menuLinks">
       <a href="index.html">Our Mission</a>
       <a href="jaki.html">Meet Jaki</a>
