@@ -33,7 +33,7 @@ nav {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  border-bottom: none;             /* remove old divider */
+  border-bottom: none;
 }
 
 /* Menu button */
@@ -52,13 +52,13 @@ nav {
 .menu-btn:hover,
 .menu-btn:focus-visible {
   background: #FFD166;             /* yellow hover */
-  color: #0A2742;                  /* navy text remains readable */
+  color: #0A2742;
   transform: translateY(-1px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   outline: none;
 }
 
- /* Dropdown menu links */
+/* Dropdown menu links */
 .menu-links {
   display: none;
   flex-direction: column;
@@ -71,29 +71,27 @@ nav {
   padding: 0.5rem 0;
   text-align: center;
 }
-.menu-links.show {
-  display: flex;   /* allow dropdown to expand */
-}
+.menu-links.show { display: flex; }
 .menu-links a {
   display: block;
   padding: 0.9rem 0;
   text-decoration: none;
-  color: #0A2742;                  /* navy links */
+  color: #0A2742;
   font-weight: 600;
   font-size: 1.05rem;
 }
 .menu-links a:hover {
-  color: #FFD166;                  /* gold hover */
-  background-color: transparent;   /* keep clean background */
-}
-/* ---------- HEADER: solid navy (no gradient) ---------- */
-header {
-  position: relative;
-  background: #0A2742;             /* solid beige */
-  padding: 2.0rem 1rem 1.5rem;
-  text-align: center;
+  color: #FFD166;
+  background-color: transparent;
 }
 
+/* ---------- HEADER ---------- */
+header {
+  position: relative;
+  background: #0A2742;
+  padding: 2rem 1rem;
+  text-align: left;
+}
 header h1,
 header h2 {
   font-family: 'Noto Serif Georgian', serif;
@@ -103,69 +101,43 @@ header h2 {
 header h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
 header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
 
-  /* Main */
-  main {
-    max-width: 1100px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-  }
-  .mission-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 4rem;
-  }
-  .mission-text { flex: 1 1 50%; text-align: left; }
-  .mission-text h2 {
-    font-family: 'Noto Serif Georgian', serif;
-    font-size: 2.8rem;
-    color: #D4A017; /* Gold */
-    margin-bottom: 1.2rem;
-  }
-  .mission-text p {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-  }
-
-    /* Header container: logo + text side by side */
+/* Header container: logo + text side by side */
 .header-center {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center; /*center horizontally*/
+  justify-content: center; /* center horizontally */
   gap: 1rem; /* space between logo and text */
-  text-align: left; /* align text to the left */
+  text-align: left;
 }
 
 /* Logo size */
 .logo {
-  height: 250px;   /* adjust as needed */
+  height: 250px;
   width: auto;
 }
 
-/* Text alignment override (remove old center text-align) */
-header {
-  position: relative;
-  background: #0A2742; /* solid beige */
-  padding: 2rem 1rem;
-  text-align: left; /* left-align overall */
+/* ™ inline (header) */
+.tm-inline {
+  font-size: 0.5em;               /* subscript-sized */
+  vertical-align: sub;            /* subscript alignment */
+  margin-left: 0.25rem;
+  color: #F9F7F4;                 /* off-white */
+  letter-spacing: 0.02em;
 }
-    
-  /* ---------- DONATE button: orange background, white text ---------- */
+
+  /* ---------- DONATE button ---------- */
   .donate-button {
     display: block;
     background-color: #F77F00;  /* orange */
     color: #F9F7F4;
     font-weight: 700;
     text-align: center;
-    padding: 0.7rem 1.2rem;   /* reduced padding */
+    padding: 0.7rem 1.2rem;     /* reduced padding */
     border-radius: 8px;
     text-decoration: none;
     margin: 1.5rem auto 0;
-    max-width: 200px;         /* narrower max-width */
+    max-width: 200px;           /* narrower */
     border: 2px solid transparent;
     box-shadow: 0 2px 8px rgba(230,81,0,0.25);
     transition: background-color .25s ease, transform .15s ease, box-shadow .2s ease, border-color .2s ease;
@@ -187,60 +159,58 @@ header {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-    
- 
-    /* ---------- FOOTER: solid navy, larger, white text ---------- */
+  /* ---------- FOOTER ---------- */
 footer {
-  background: #0A2742;   /* navy */
-  color: #ffffff;        /* white text */
-  padding: 1.80rem 1rem; /* bigger footer */
+  background: #0A2742;
+  color: #ffffff;
+  padding: 1.80rem 1rem;
   text-align: center;
   font-size: 1rem;
   line-height: 1.7;
   margin-top: 2.5rem;
 }
-
-/* optional: constrain line length for readability */
 .footer-inner {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-/* make any links in footer readable on navy */
 footer a {
-  color: #FFD166;              /* gold/yellow accent */
+  color: #FFD166;
   text-decoration: none;
   font-weight: 600;
 }
-/* Footer logo styling */
-.footer-logo {
-  height: 250px;   /* adjust size as needed */
-  width: auto;
-  margin-bottom: 0rem; /* space between logo and text */
-}  
 footer a:hover { text-decoration: underline; }
 
-/* REMOVE old gradient edges */
-footer::before,
-footer::after { display: none; content: none; }
+/* Footer logo + ™ */
+.footer-logo-container {
+  display: inline-block;
+  position: relative; /* anchor for absolute ™ */
+}
+.footer-logo {
+  height: 250px;
+  width: auto;
+  margin-bottom: 0;
+}
+.tm-footer {
+  position: absolute;
+  right: 8px;           /* near lower-right of logo */
+  bottom: 6px;
+  font-size: 0.6rem;    /* smaller */
+  color: #F9F7F4;       /* off-white to match brand */
+  line-height: 1;
+}
 
 /* ---------- Global fluid elements ---------- */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
+img, video { max-width: 100%; height: auto; }
 html { scroll-behavior: smooth; }
 
 /* Fluid typography for big titles */
 .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
 .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
-/* If you have a page title outside header */
 .page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
 
 /* ---------- Mobile / small tablets ---------- */
 @media (max-width: 768px) {
-  /* Header: stack logo above text, center everything */
   .header-center {
     flex-direction: column;
     text-align: center;
@@ -249,11 +219,9 @@ html { scroll-behavior: smooth; }
   .logo {
     height: clamp(120px, 24vw, 160px);
   }
-
-  /* Navigation: keep menu button visible; dropdown spans screen */
   nav { padding: 0.6rem 0.8rem; }
   .menu-links {
-    position: static;   /* let it push content down instead of overlay */
+    position: static;
     width: 100%;
     box-shadow: none;
     padding: 0;
@@ -262,45 +230,35 @@ html { scroll-behavior: smooth; }
     padding: 0.8rem 0;
     border-top: 1px solid rgba(10,39,66,0.1);
   }
-
-  /* Main content spacing */
   main {
     margin: 2rem auto;
     padding: 0 1rem;
   }
-
-  /* Sections are already one-column by default; keep text centered */
   .section { gap: 1rem; }
   .section .text { padding: 0 0.25rem; }
-
-  /* Images: keep your gold border but reduce radius a bit on tiny screens */
   .section img {
-    border-width: 10px;     /* your gold border stays */
+    border-width: 10px;
     border-radius: 10px;
   }
-
-  /* Donate button full width-ish */
   .donate-button {
     width: 100%;
     max-width: 340px;
   }
-
-  /* Footer: reduce logo size and padding */
   footer { padding: 1.2rem 1rem; }
   .footer-logo { height: 140px; }
 }
 
-/* ---------- Medium screens (tablets/landscape) ---------- */
+/* ---------- Medium screens ---------- */
 @media (min-width: 769px) and (max-width: 1024px) {
   .logo { height: 180px; }
   main { padding: 0 1.5rem; }
-}  
-</style>
+}
+  </style>
 </head>
 <body>
 
   <nav>
-    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+    <button class="menu-btn" onclick="toggleMenu()" aria-expanded="false" aria-controls="menuLinks">Menu</button>
     <div class="menu-links" id="menuLinks">
       <a href="index.html">Our Mission</a>
       <a href="jaki.html">Meet Jaki</a>
@@ -313,13 +271,10 @@ html { scroll-behavior: smooth; }
 
   <header>
     <div class="header-center">
-      <div class="logo-container">
-        <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
-        <span class="tm">TM</span>
-      </div>
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
       <div class="header-text">
         <h1>Jaki Gonzalez</h1>
-        <h2>Spirit of Excellence Scholarship</h2>
+        <h2>Spirit of Excellence Scholarship<span class="tm-inline">TM</span></h2>
       </div>
     </div>
   </header>
@@ -338,12 +293,12 @@ html { scroll-behavior: smooth; }
       </div>
     </section>
   </main>
- 
+
   <footer>
     <div class="footer-inner">
       <div class="footer-logo-container">
         <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
-        <span class="tm">TM</span>
+        <span class="tm-footer">TM</span>
       </div>
       <p>A non-profit pending 501(c)(3) charity organization status</p>
       <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
@@ -352,5 +307,14 @@ html { scroll-behavior: smooth; }
       <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuLinks');
+      const btn = document.querySelector('.menu-btn');
+      const isOpen = menu.classList.toggle('show');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+  </script>
 </body>
 </html>
