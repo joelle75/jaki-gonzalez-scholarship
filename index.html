@@ -231,10 +231,23 @@ footer a:hover { text-decoration: underline; }
 img, video { max-width: 100%; height: auto; }
 html { scroll-behavior: smooth; }
 
-/* Fluid typography for big titles */
-.header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
-.header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
-.page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
+/* 1) Fluid base text size (viewport-aware, clamped) */
+html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
+
+/* 2) Make key wrappers container-aware (so children scale to their actual width) */
+.header-center, .mission-section, .footer-inner { container-type: inline-size; }
+
+/* 3) Headings scale to container size when supported; otherwise fall back to simple clamps */
+@supports (width: 1cqi) {
+  .header-text h1 { font-size: clamp(1.75rem, 4cqi, 3.75rem); line-height: 1.1; }
+  .header-text h2 { font-size: clamp(1.25rem, 2.6cqi, 2.25rem); line-height: 1.15; }
+  .logo            { inline-size: clamp(120px, 28cqi, 250px); height: auto; }
+}
+@supports not (width: 1cqi) {
+  .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+  .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
+  .logo           { height: clamp(120px, 24vw, 250px); width: auto; }
+}
 
 /* ---------- Mobile / small tablets ---------- */
 @media (max-width: 768px) {
