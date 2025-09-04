@@ -21,90 +21,135 @@
   body {
     margin: 0;
     font-family: 'Helvetica', sans-serif;
-    background-color: #fffaf0; /* Soft off-white */
+    background-color: #f4e3c1; /* beige */
     color: #444;
     line-height: 1.7;
     font-size: 1.05rem;
   }
 
-  /* NAV */
-  nav {
-    background: #0A2742;             /* navy */
-    padding: 0.8rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    border-bottom: none;
-  }
-  .menu-btn {
-    background: #F4E3C1;             /* beige */
-    color: #0A2742;                  /* navy text */
-    border: none;
-    padding: 0.55rem 1rem;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
-  }
-  .menu-btn:hover, .menu-btn:focus-visible {
-    background: #FFD166;             /* yellow hover */
-    color: #0A2742;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    outline: none;
-  }
-  .menu-links {
-    display: none;
-    flex-direction: column;
-    background: #F4E3C1;             /* beige dropdown */
-    position: absolute;
-    top: 3.2rem;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-    text-align: center;
-  }
-  .menu-links.show { display: flex; }
-  .menu-links a {
-    display: block;
-    padding: 0.9rem 0;
-    text-decoration: none;
-    color: #0A2742;                  /* navy links */
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-  .menu-links a:hover {
-    color: #FFD166;                  /* gold hover */
-    background-color: transparent;
-  }
+   /* ---------- NAVIGATION ribbon ---------- */
+nav {
+  background: #0A2742;             /* navy */
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border-bottom: none;
+}
 
-  /* HEADER (home page style) */
-  header {
-    position: relative;
-    background: #0A2742;             /* navy */
-    padding: 2.0rem 1rem 1.5rem;
-    text-align: left;                 /* left-align overall */
-  }
-  .header-center {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;          /* center horizontally */
-    gap: 1rem;                        /* space between logo and text */
-  }
-  .logo { height: 250px; width: auto; }
-  .header-text h1,
-  .header-text h2 {
-    font-family: 'Noto Serif Georgian', serif;
-    margin: 0;
-    color: #F9F7F4;                  /* off-white text */
-  }
-  .header-text h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
-  .header-text h2 { font-size: 3.2rem; margin-top: 0.5rem; }
+/* Menu button */
+.menu-btn {
+  background: #F4E3C1;             /* beige */
+  color: #0A2742;                  /* navy text */
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+.menu-btn:hover,
+.menu-btn:focus-visible {
+  background: #FFD166;             /* yellow hover */
+  color: #0A2742;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+/* Dropdown menu links */
+.menu-links {
+  display: none;
+  flex-direction: column;
+  background: #F4E3C1;             /* beige dropdown */
+  position: absolute;
+  top: 3.2rem;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.menu-links.show { display: flex; }
+.menu-links a {
+  display: block;
+  padding: 0.9rem 0;
+  text-decoration: none;
+  color: #0A2742;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.menu-links a:hover {
+  color: #FFD166;
+  background-color: transparent;
+}
+
+/* nav-donate-button */
+.nav-donate-btn {
+  background-color: #F77F00;   /* orange */
+  color: #F9F7F4;              /* white text */
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-left: 0.85rem;        /* space between Menu and Donate */
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color .25s ease, transform .15s ease, box-shadow .2s ease;
+}
+.nav-donate-btn:hover,
+.nav-donate-btn:focus-visible {
+  background-color: #FFD166;   /* gold hover */
+  color: #0A2742;              /* navy text */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(230,81,0,0.2);
+  outline: none;
+}
+
+ /* ---------- HEADER ---------- */
+header {
+  position: relative;
+  background: #0A2742;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+header h1,
+header h2 {
+  font-family: 'Noto Serif Georgian', serif;
+  margin: 0;
+  color: #F9F7F4;                  /* off-white text */
+}
+header h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
+header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
+
+/* Header container: logo + text side by side */
+.header-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* center horizontally */
+  gap: 1rem; /* space between logo and text */
+  text-align: left;
+}
+
+/* Logo size */
+.logo {
+  height: 250px;
+  width: auto;
+}
+
+/* ™ inline (header) */
+.tm-inline {
+  font-size: 0.5em;               /* subscript-sized */
+  vertical-align: sub;            /* subscript alignment */
+  margin-left: 0.25rem;
+  color: #F9F7F4;                 /* off-white */
+  letter-spacing: 0.02em;
+}
 
   /* Optional page title just under header (navy ribbon) */
   .page-title {
@@ -146,11 +191,26 @@
     font-weight: 600;
   }
   footer a:hover { text-decoration: underline; }
+  
+    /* Footer logo + ™ */
+  .footer-logo-container {
+    display: inline-block;
+    position: relative; /* anchor for absolute ™ */
+  }
+    
   .footer-logo {
     height: 250px;   /* adjust size as needed */
     width: auto;
     margin-bottom: 0rem;
   }
+    .tm-footer {
+  position: absolute;
+  right: 8px;           /* near lower-right of logo */
+  bottom: 6px;
+  font-size: 0.6rem;    /* smaller */
+  color: #F9F7F4;       /* off-white to match brand */
+  line-height: 1;
+}
 
   /* Global helpers */
   img, video { max-width: 100%; height: auto; }
@@ -259,7 +319,7 @@
       <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
       <div class="header-text">
         <h1>Jaki Gonzalez</h1>
-        <h2>Spirit of Excellence Scholarship</h2>
+        <h2>Spirit of Excellence Scholarship<span class="tm-inline">TM</span></h2>
       </div>
     </div>
   </header>
@@ -277,6 +337,7 @@
         <input type="hidden" name="_subject" value="New scholarship site message">
         <input type="hidden" name="_cc" value="melanbunn@gmail.com,kerrigan.kotecki@gmail.com">
 
+        <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Question or Message" rows="5" required></textarea>
 
@@ -303,6 +364,7 @@
   <footer>
     <div class="footer-inner">
       <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+      <span class="tm-footer">TM</span>
       <p>A non-profit pending 501(c)(3) charity organization status</p>
       <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
       <p>PO Box 104 Harvard, IL 60033-9782</p>
