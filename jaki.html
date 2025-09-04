@@ -48,7 +48,8 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
     }
-    .menu-btn:hover,.menu-btn:focus-visible{
+    .menu-btn:hover,
+    .menu-btn:focus-visible {
       background:#FFD166; color:#0A2742; transform:translateY(-1px);
       box-shadow:0 4px 10px rgba(0,0,0,0.2);
       outline:none;
@@ -65,7 +66,7 @@
     }
     .menu-links a:hover{color:#FFD166; background:transparent;}
 
-        /* nav-donate-button */
+    /* nav-donate-button */
     .nav-donate-btn {
       background-color: #F77F00;   /* orange */
       color: #F9F7F4;              /* white text */
@@ -86,8 +87,9 @@
       transform: translateY(-1px);
       box-shadow: 0 4px 10px rgba(230,81,0,0.2);
       outline: none;
+    } /* <-- FIXED: added missing closing brace so following CSS applies */
 
-       /* ---------- HEADER ---------- */
+    /* ---------- HEADER ---------- */
     header {
       position: relative;
       background: #0A2742;
@@ -98,61 +100,63 @@
     header h2 {
       font-family: 'Noto Serif Georgian', serif;
       margin: 0;
-      color: #F9F7F4;                  /* off-white text */
+      color: #F9F7F4; /* off-white text */
     }
-    header h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
-    header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
-    
+
     /* Header container: logo + text side by side */
     .header-center {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center; /* center horizontally */
-      gap: 1rem; /* space between logo and text */
+      justify-content: center;
+      gap: 1rem;
       text-align: left;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
-    
+
     /* Logo size */
-    .logo {
-      height: 250px;
-      width: auto;
-    }
-    
+    .logo { height: 250px; width: auto; }
+
     /* ™ inline (header) */
     .tm-inline {
-      font-size: 0.5em;               /* subscript-sized */
-      vertical-align: sub;            /* subscript alignment */
+      font-size: 0.5em;
+      vertical-align: sub;
       margin-left: 0.25rem;
-      color: #F9F7F4;                 /* off-white */
+      color: #F9F7F4;
       letter-spacing: 0.02em;
     }
 
-          /* ---------- MAIN LAYOUT ---------- */
+    /* ---------- PAGE TITLE ---------- */
+    .page-title { text-align:center; padding: 1.25rem 1rem; }
+    .page-title h2 { font-family:'Noto Serif Georgian', serif; color:#0A2742; margin:0; }
+
+    /* ---------- MAIN LAYOUT ---------- */
     main {
       max-width: 1100px;
-      margin: 2rem auto 4rem; /* account for the page title block */
+      margin: 2rem auto 4rem;
       padding: 0 2rem;
     }
-    
+
     /* Section base: image + text centered together */
     .section {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 3.5rem; /* increased spacing between image and body text */
-      align-items: center; /* center text block vertically with media in two-column layout */
+      gap: 3.5rem; /* spacing between image and body text */
+      align-items: center;
       margin-bottom: 3rem;
-      justify-items: center; /* centers children horizontally within the grid */
+      justify-items: center;
     }
     .section .media,
     .section .text {
       display: flex;
       flex-direction: column;
-      align-items: center; /* horizontally center content */
+      align-items: center;
       text-align: center;
-      max-width: 600px; /* keeps text width visually balanced with image */
+      max-width: 600px; /* keeps text and image sensible */
     }
-    
+
     /* Images: add 10px gold border */
     .section img {
       width: 100%;
@@ -161,130 +165,114 @@
       display: block;
       border: 10px solid #D4A017; /* gold border */
     }
-    
+
     .section .text h2 {
       font-family: 'Noto Serif Georgian', serif;
       font-size: 2rem;
       color: #D4A017;
       margin: 0.75rem 0 0.5rem 0;
     }
-    
+
     /* Shaded background for alternating text blocks */
     .section:nth-of-type(even) .text {
-      background-color: #F4E3C1;  /* beige shaded box */
-      padding: 1.5rem;            /* spacing inside the box */
-      border-radius: 12px;        /* rounded corners to match images */
+      background-color: #F4E3C1;
+      padding: 1.5rem;
+      border-radius: 12px;
     }
-    
+
     /* Alternate layout on wide screens */
     @media (min-width: 900px) {
       .section {
         grid-template-columns: 1fr 1fr;
-        gap: 3.5rem; /* keep consistent spacing */
+        gap: 3.5rem;
       }
-      /* even sections: reverse the order so images/text alternate sides */
       .section:nth-of-type(even) .media { order: 2; }
-      .section:nth-of-type(even) .text { order: 1; }
+      .section:nth-of-type(even) .text  { order: 1; }
     }
 
     /* ---------- FOOTER ---------- */
     footer {
-      background: #0A2742; color:#ffffff; padding: 1.8rem 1rem;
-      text-align:center; font-size:1rem; line-height:1.7; margin-top:2.5rem;
+      background: #0A2742;
+      color:#ffffff;
+      padding: 1.8rem 1rem;
+      text-align:center;
+      font-size:1rem;
+      line-height:1.7;
+      margin-top:2.5rem;
     }
     .footer-inner{ max-width:1100px; margin:0 auto; padding:0 1rem; }
     footer a{ color:#FFD166; text-decoration:none; font-weight:600; }
     footer a:hover{ text-decoration:underline; }
-    .footer-logo{ height:250px; width:auto; margin-bottom:0; }
+    .footer-logo{ height: clamp(90px, 12vw, 150px); width:auto; margin-bottom:0.5rem; } /* smaller, responsive */
+    .tm-footer { font-size:.7rem; vertical-align: super; margin-left:.25rem; }
     footer::before,footer::after{ display:none; content:none; }
 
     /* ---------- Global fluid elements ---------- */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-html { scroll-behavior: smooth; }
+    img, video { max-width: 100%; height: auto; }
+    html { scroll-behavior: smooth; }
 
-/* Fluid typography for big titles */
-.header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
-.header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
-/* If you have a page title outside header */
-.page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
+    /* Fluid typography for big titles (keeps header readable across sizes) */
+    .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+    .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
+    .page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
 
-/* ---------- Mobile / small tablets ---------- */
-@media (max-width: 768px) {
-  /* Header: stack logo above text, center everything */
-  .header-center {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  .logo {
-    height: clamp(120px, 24vw, 160px);
-  }
+    /* ---------- Mobile / small tablets ---------- */
+    @media (max-width: 768px) {
+      .header-center {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      .logo { height: clamp(120px, 24vw, 160px); }
 
-  /* Navigation: keep menu button visible; dropdown spans screen */
-  nav { padding: 0.6rem 0.8rem; }
-  .menu-links {
-    position: static;   /* let it push content down instead of overlay */
-    width: 100%;
-    box-shadow: none;
-    padding: 0;
-  }
-  .menu-links a {
-    padding: 0.8rem 0;
-    border-top: 1px solid rgba(10,39,66,0.1);
-  }
+      nav { padding: 0.6rem 0.8rem; }
+      .menu-links {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+      }
+      .menu-links a {
+        padding: 0.8rem 0;
+        border-top: 1px solid rgba(10,39,66,0.1);
+      }
 
-  /* Main content spacing */
-  main {
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
+      main { margin: 2rem auto; padding: 0 1rem; }
 
-  /* Sections are already one-column by default; keep text centered */
-  .section { gap: 1rem; }
-  .section .text { padding: 0 0.25rem; }
+      .section { gap: 1rem; }
+      .section .text { padding: 0 0.25rem; }
 
-  /* Images: keep your gold border but reduce radius a bit on tiny screens */
-  .section img {
-    border-width: 10px;     /* your gold border stays */
-    border-radius: 10px;
-  }
+      .section img { border-width: 10px; border-radius: 10px; }
 
-  /* Donate button full width-ish */
-  .donate-button {
-    width: 100%;
-    max-width: 340px;
-  }
+      .donate-button { width: 100%; max-width: 340px; }
 
-  /* Footer: reduce logo size and padding */
-  footer { padding: 1.2rem 1rem; }
-  .footer-logo { height: 140px; }
-}
+      footer { padding: 1.2rem 1rem; }
+      .footer-logo { height: 140px; }
+    }
 
-/* ---------- Medium screens (tablets/landscape) ---------- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .logo { height: 180px; }
-  main { padding: 0 1.5rem; }
-}
-  
+    /* ---------- Medium screens (tablets/landscape) ---------- */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .logo { height: 180px; }
+      main { padding: 0 1.5rem; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
-    <div class="menu-links" id="menuLinks">
-      <a href="index.html">Our Mission</a>
-      <a href="jaki.html">Meet Jaki</a>
-      <a href="awardrecipients.html">Award Recipients</a>
-      <a href="team.html">Meet the Committee</a>
-      <a href="contact.html">Contact Us</a>
-      <a href="applicationresources.html">Application Resources</a>
-    </div>
-  </nav>
+  <!-- NAVIGATION RIBBON -->
+<nav>
+  <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+  <a class="nav-donate-btn" href="#" aria-label="Donate">DONATE</a>
+
+  <div class="menu-links" id="menuLinks">
+    <a href="index.html">Our Mission</a>
+    <a href="jaki.html">Meet Jaki</a>
+    <a href="awardrecipients.html">Award Recipients</a>
+    <a href="team.html">Meet the Committee</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="applicationresources.html">Application Resources</a>
+  </div>
+</nav>
 
   <!-- HEADER -->
   <header>
@@ -292,18 +280,18 @@ html { scroll-behavior: smooth; }
       <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
       <div class="header-text">
         <h1>Jaki Gonzalez</h1>
-        <h2>Spirit of Excellence Scholarship<span class="tm-inline">TM</span></h2>      </div>
+        <h2>Spirit of Excellence Scholarship<span class="tm-inline">TM</span></h2>
+      </div>
     </div>
   </header>
 
-  <!-- PAGE TITLE (moved below ribbon/header) -->
+  <!-- PAGE TITLE -->
   <div class="page-title">
     <h2>Meet Jaki</h2>
   </div>
 
   <!-- MAIN CONTENT -->
   <main>
-    <!-- Section 1 (image left on desktop) -->
     <div class="section">
       <div class="media">
         <img src="images/princetonacceptance4.jpg" alt="Jaki grad">
@@ -314,7 +302,6 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
 
-    <!-- Section 2 (image right on desktop) -->
     <div class="section">
       <div class="media">
         <img src="images/basketball1.JPG" alt="Jaki playing basketball">
@@ -325,7 +312,6 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
 
-    <!-- Section 3 (image left on desktop) -->
     <div class="section">
       <div class="media">
         <img src="images/closeupgrad1.JPG" alt="Jaki at graduation">
@@ -336,7 +322,6 @@ html { scroll-behavior: smooth; }
       </div>
     </div>
 
-    <!-- Section 4 (image right on desktop) -->
     <div class="section">
       <div class="media">
         <img src="images/princeton2.jpg" alt="Jaki at Princeton">
