@@ -294,7 +294,22 @@ header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
     transform: translateY(-1px);
     box-shadow: 0 6px 14px rgba(230,81,0,0.3);
   }
-  @media (max-width: 768px) {
+  
+  /* Link style for Committee & Board application */
+  .contact-card a.apply-link {
+    color: #F77F00;           /* theme orange */
+    text-decoration: none;    /* remove underline */
+    font-weight: 700;         /* bold for emphasis */
+    display: inline-block;
+    margin-top: 0.5rem;
+    display: block;
+    text-align: center;
+  }
+  .contact-card a.apply-link:hover {
+    text-decoration: underline; /* simple hover effect */
+  }
+    
+    @media (max-width: 768px) {
     .contact-form, .contact-card { padding: 1.5rem; margin: 0 1rem 2rem; }
   }
   </style>
@@ -347,12 +362,12 @@ header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
       </form>
     </section>
 
-  <!-- Scholarship Committee & Board of Directors Application -->
-    <section class="contact-card">
-      <h2>Scholarship Committee &amp; Board of Directors Application</h2>
-      <p>If you are interested in applying to join our Scholarship Committee or Board of Directors, please use the link below.</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSey51cjRyuywfdsFZfG5XH2lVflZ4U9AtlryG2SBS3VXzF8dw/viewform?usp=header" class="contact-form button">Apply Here</a>
-    </section>
+ <!-- Scholarship Committee & Board of Directors Application -->
+<section class="contact-card">
+  <h2>Scholarship Committee &amp; Board of Directors Application</h2>
+  <p>If you are interested in applying to join our Scholarship Committee or Board of Directors, please use the link below.</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSey51cjRyuywfdsFZfG5XH2lVflZ4U9AtlryG2SBS3VXzF8dw/viewform?usp=header" class="apply-link">Apply Here</a>
+</section>
     
     <!-- Mailing Address -->
     <section class="contact-card">
