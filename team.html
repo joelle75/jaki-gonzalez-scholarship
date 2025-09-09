@@ -27,96 +27,111 @@
     font-size: 1.05rem;
   }
 
-  /* NAV */
-  nav {
-    background: #0A2742;             /* navy */
-    padding: 0.8rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    border-bottom: none;
-  }
-  .menu-btn {
-    background: #F4E3C1;             /* beige */
-    color: #0A2742;                  /* navy text */
-    border: none;
-    padding: 0.55rem 1rem;
-    border-radius: 8px;
-    font-size: 1.05rem;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
-  }
-  .menu-btn:hover, .menu-btn:focus-visible {
-    background: #FFD166;             /* yellow hover */
-    color: #0A2742;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    outline: none;
-  }
-  .menu-links {
-    display: none;
-    flex-direction: column;
-    background: #F4E3C1;             /* beige dropdown */
-    position: absolute;
-    top: 3.2rem;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 0.5rem 0;
-    text-align: center;
-  }
-  .menu-links.show { display: flex; }
-  .menu-links a {
-    display: block;
-    padding: 0.9rem 0;
-    text-decoration: none;
-    color: #0A2742;                  /* navy links */
-    font-weight: 600;
-    font-size: 1.05rem;
-  }
-  .menu-links a:hover {
-    color: #FFD166;                  /* gold hover */
-    background-color: transparent;
-  }
+  /* ---------- NAVIGATION ribbon ---------- */
+    nav {
+      background: #0A2742;
+      padding: 0.8rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      border-bottom: none;
+    }
+    .menu-btn {
+      background: #F4E3C1;
+      color: #0A2742;
+      border: none;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+    }
+    .menu-btn:hover,
+    .menu-btn:focus-visible {
+      background:#FFD166; color:#0A2742; transform:translateY(-1px);
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+      outline:none;
+    }
+    .menu-links{
+      display:none; flex-direction:column; background:#F4E3C1;
+      position:absolute; top:3.2rem; left:0; width:100%;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1); padding:0.5rem 0; text-align:center;
+    }
+    .menu-links.show{display:flex;}
+    .menu-links a{
+      display:block; padding:0.9rem 0; text-decoration:none;
+      color:#0A2742; font-weight:600; font-size:1.05rem;
+    }
+    .menu-links a:hover{color:#FFD166; background:transparent;}
 
-  /* HEADER (home page style) */
-  header {
-    position: relative;
-    background: #0A2742;             /* navy */
-    padding: 2.0rem 1rem 1.5rem;
-    text-align: left;                 /* left-align overall */
-  }
-  .header-center {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;          /* center horizontally */
-    gap: 1rem;                        /* space between logo and text */
-  }
-  .logo { height: 250px; width: auto; }
-  .header-text h1,
-  .header-text h2 {
-    font-family: 'Noto Serif Georgian', serif;
-    margin: 0;
-    color: #F9F7F4;                  /* off-white text */
-  }
-  .header-text h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
-  .header-text h2 { font-size: 3.2rem; margin-top: 0.5rem; }
+    /* nav-donate-button */
+    .nav-donate-btn {
+      background-color: #F77F00;   /* orange */
+      color: #F9F7F4;              /* white text */
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-left: 0.85rem;        /* space between Menu and Donate */
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color .25s ease, transform .15s ease, box-shadow .2s ease;
+    }
+    .nav-donate-btn:hover,
+    .nav-donate-btn:focus-visible {
+      background-color: #FFD166;   /* gold hover */
+      color: #0A2742;              /* navy text */
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(230,81,0,0.2);
+      outline: none;
+    } /* <-- FIXED: added missing closing brace so following CSS applies */
 
-  /* Page title under header */
-  .page-title {
-    text-align: center;
-    padding: 1.75rem 1rem 0.5rem;
-  }
-  .page-title h2 {
-    font-family: 'Noto Serif Georgian', serif;
-    font-size: 2.8rem;
-    color: #0A2742; /* navy text */
-    margin: 0;
-  }
+    /* ---------- HEADER ---------- */
+    header {
+      position: relative;
+      background: #0A2742;
+      padding: 2rem 1rem;
+      text-align: left;
+    }
+    header h1,
+    header h2 {
+      font-family: 'Noto Serif Georgian', serif;
+      margin: 0;
+      color: #F9F7F4; /* off-white text */
+    }
+
+    /* Header container: logo + text side by side */
+    .header-center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      text-align: left;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Logo size */
+    .logo { height: 250px; width: auto; }
+
+    /* ™ inline (header) */
+    .tm-inline {
+      font-size: 0.5em;
+      vertical-align: sub;
+      margin-left: 0.25rem;
+      color: #F9F7F4;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---------- PAGE TITLE ---------- */
+    .page-title { text-align:center; padding: 1.25rem 1rem; }
+    .page-title h2 { font-family:'Noto Serif Georgian', serif; color:#0A2742; margin:0; }
 
   /* MAIN WRAPPER */
   main {
@@ -125,32 +140,22 @@
     padding: 0 2rem;
   }
 
-  /* FOOTER (home page style) */
+ /* ---------- FOOTER ---------- */
   footer {
-    background: #0A2742;   /* navy */
-    color: #ffffff;        /* white text */
-    padding: 1.80rem 1rem; /* bigger footer */
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-top: 2.5rem;
+    background: #0A2742;
+    color:#ffffff;
+    padding: 1.8rem 1rem;     
+    text-align:center;
+    font-size:1rem;
+    line-height:1.7;
+    margin-top:2.5rem;
   }
-  .footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  footer a {
-    color: #FFD166;              /* gold/yellow accent */
-    text-decoration: none;
-    font-weight: 600;
-  }
-  footer a:hover { text-decoration: underline; }
-  .footer-logo {
-    height: 250px;
-    width: auto;
-    margin-bottom: 0rem;
-  }
+  .footer-inner{ max-width:1100px; margin:0 auto; padding:0 1rem; }
+  footer a{ color:#FFD166; text-decoration:none; font-weight:600; }    
+  footer a:hover{ text-decoration:underline; }
+  .footer-logo{ height: clamp(90px, 12vw, 150px); width:auto; margin-bottom:0.5rem; } /* smaller, responsive */
+  .tm-footer { font-size:.7rem; vertical-align: super; margin-left:.25rem; }
+  footer::before,footer::after{ display:none; content:none; }
 
   /* Global helpers */
   img, video { max-width: 100%; height: auto; }
@@ -276,13 +281,14 @@
 <body>
 
   <!-- NAV -->
-  <nav>
-    <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+<nav>
+  <button class="menu-btn" onclick="toggleMenu()">Menu</button>
+  <a class="nav-donate-btn" href="#" aria-label="Donate">DONATE</a>
     <div class="menu-links" id="menuLinks">
-      <a href="index.html">Our Mission</a>
-      <a href="jaki.html">Meet Jaki</a>
-      <a href="awardrecipients.html">Award Recipients</a>
-      <a href="team.html">Meet the Committee</a>
+      <a href="index.html">Home</a>
+      <a href="jaki.html">Jaki's Story</a>
+      <a href="awardrecipients.html">Scholarship Recipients</a>
+      <a href="team.html">Meet the Board</a>
       <a href="contact.html">Contact Us</a>
       <a href="applicationresources.html">Application Resources</a>
     </div>
@@ -294,7 +300,7 @@
       <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
       <div class="header-text">
         <h1>Jaki Gonzalez</h1>
-        <h2>Spirit of Excellence Scholarship</h2>
+        <h2>Spirit of Excellence Scholarship<span class="tm-inline">TM</span></h2>
       </div>
     </div>
   </header>
@@ -347,6 +353,7 @@
   <footer>
     <div class="footer-inner">
       <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+      <span class="tm-footer">TM</span>
       <p>A non-profit pending 501(c)(3) charity organization status</p>
       <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
       <p>PO Box 104 Harvard, IL 60033-9782</p>
