@@ -3,95 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Award Recipients | Jaki Gonzalez Scholarship</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <title>Donate | Jaki Gonzalez Spirit of Excellence Scholarship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your existing CSS file if styles are shared -->
   <style>
+    /* Inlined minimal theme from homepage */
     body {
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fdf7f3;
+      font-family: 'Helvetica', sans-serif;
+      background-color: #fffaf0;
       color: #444;
+      line-height: 1.7;
+      font-size: 1.05rem;
     }
-
     nav {
-      background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background: #0A2742;
+      padding: 0.8rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-
-    nav a {
-      margin: 0 1rem;
-    text-decoration: none;
-    color: #c2185b; /* Darker pink */
-    font-weight: 600;
-    font-size: 1rem;
+    .menu-btn {
+      background: #F4E3C1;
+      color: #0A2742;
+      border: none;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
     }
-
-    nav a:hover {
-      text-decoration: underline;
+    .nav-donate-btn {
+      background-color: #F77F00;
+      color: #F9F7F4;
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-left: 0.85rem;
     }
-
+    .menu-links {
+      display: none;
+    }
     header {
-       background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 4.0rem 1rem 3rem;
-    text-align: center;
-    }
-
-    header h1 {
-     font-family: 'Playfair Display', serif;
-    font-size: 3.2rem;
-    margin: 0;
-    color: #2c2c2c;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-    }
-
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #c2185b;
+      background: #0A2742;
+      padding: 2rem 1rem;
       text-align: center;
     }
-
+    header h1, header h2 {
+      font-family: 'Noto Serif Georgian', serif;
+      margin: 0;
+      color: #F9F7F4;
+    }
+    header h1 { font-size: 3.2rem; }
+    header h2 { font-size: 2rem; margin-top: 0.5rem; }
+    .tm-inline {
+      font-size: 0.5em;
+      vertical-align: sub;
+      margin-left: 0.25rem;
+      color: #F9F7F4;
+    }
+    main {
+      max-width: 800px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .donation-message {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #0A2742;
+      font-family: 'Noto Serif Georgian', serif;
+    }
+    iframe {
+      border-radius: 10px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
     footer {
-       background: linear-gradient(90deg, #f48fb1, #fff176, #f48fb1);
-    padding: 1rem;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #c2185b;
-    margin-top: 2rem;
+      background: #0A2742;
+      color: #ffffff;
+      padding: 2rem 1rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .footer-logo {
+      height: 200px;
+      width: auto;
+      margin-bottom: 0.5rem;
+    }
+    footer a {
+      color: #FFD166;
+      text-decoration: none;
+      font-weight: 600;
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Our Mission</a>
-    <a href="jaki.html">Meet Jaki</a>
-    <a href="awardrecipients.html">Award Recipients</a>
-    <a href="team.html">Meet the Committee</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="applicationresources.html">Application Resources</a>
+    <button class="menu-btn" onclick="toggleMenu()">MENU</button>
+    <a href="donate.html" class="nav-donate-btn">DONATE</a>
+    <div class="menu-links" id="menuLinks">
+      <a href="index.html">Home</a>
+      <a href="jaki.html">Jaki's Story</a>
+      <a href="awardrecipients.html">Scholarship Recipients</a>
+      <a href="team.html">Meet the Board</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="applicationresources.html">Application Resources</a>
+    </div>
   </nav>
 
   <header>
-    <h1>Jaki Gonzalez Spirit of Excellence Scholarship</h1>
+    <h1>Donate to the Scholarship</h1>
+    <h2>Honor Jaki’s Legacy<span class="tm-inline">TM</span></h2>
   </header>
 
   <main>
-    <section style="text-align: center; margin: 5rem 0;">
-      <h2>Thank you for reaching out. We will be in touch shortly!</h2>
-    </section>
+    <p class="donation-message">
+      Your donation directly supports Harvard High School students who embody the brilliance, resilience, and excellence Jaki stood for. Every gift helps continue her legacy.
+    </p>
+
+    <!-- Embedded Zeffy donation form -->
+    <div style="position:relative;overflow:hidden;height:450px;width:100%;">
+      <iframe title='Donation form powered by Zeffy'
+        style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%'
+        src='https://www.zeffy.com/embed/donation-form/a-legacy-of-excellence'
+        allowpaymentrequest allowTransparency="true">
+      </iframe>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.
+    <div class="footer-logo-container">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
+    </div>
+    <p>A non-profit pending 501(c)(3) charity organization status</p>
+    <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
+    <p>PO Box 104 Harvard, IL 60033-9782</p>
+    <p>EIN: 39-3707357</p>
+    <p>&copy; 2025 Jaki Gonzalez Spirit of Excellence Scholarship. All rights reserved.</p>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuLinks');
+      const btn = document.querySelector('.menu-btn');
+      const isOpen = menu.classList.toggle('show');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+  </script>
 </body>
 </html>
