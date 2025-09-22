@@ -8,95 +8,265 @@
   <link rel="stylesheet" href="styles.css"> <!-- Optional: Link to your existing CSS file if styles are shared -->
   <style>
     /* Inlined minimal theme from homepage */
-    body {
-      margin: 0;
-      font-family: 'Helvetica', sans-serif;
-      background-color: #fffaf0;
-      color: #444;
-      line-height: 1.7;
-      font-size: 1.05rem;
-    }
-    nav {
-      background: #0A2742;
-      padding: 0.8rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .menu-btn {
-      background: #F4E3C1;
-      color: #0A2742;
-      border: none;
-      padding: 0.55rem 1rem;
-      border-radius: 8px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      cursor: pointer;
-    }
-    .nav-donate-btn {
-      background-color: #F77F00;
-      color: #F9F7F4;
-      font-weight: 700;
-      padding: 0.45rem 0.85rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      margin-left: 0.85rem;
-    }
-    .menu-links {
-      display: none;
-    }
-    header {
-      background: #0A2742;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    header h1, header h2 {
-      font-family: 'Noto Serif Georgian', serif;
-      margin: 0;
-      color: #F9F7F4;
-    }
-    header h1 { font-size: 3.2rem; }
-    header h2 { font-size: 2rem; margin-top: 0.5rem; }
-    .tm-inline {
-      font-size: 0.5em;
-      vertical-align: sub;
-      margin-left: 0.25rem;
-      color: #F9F7F4;
-    }
-    main {
-      max-width: 800px;
-      margin: 2.5rem auto;
-      padding: 0 1rem;
-      text-align: center;
-    }
-    .donation-message {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #0A2742;
-      font-family: 'Noto Serif Georgian', serif;
-    }
-    iframe {
-      border-radius: 10px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    }
-    footer {
-      background: #0A2742;
-      color: #ffffff;
-      padding: 2rem 1rem;
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .footer-logo {
-      height: 200px;
-      width: auto;
-      margin-bottom: 0.5rem;
-    }
-    footer a {
-      color: #FFD166;
-      text-decoration: none;
-      font-weight: 600;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="The Jaki Gonzalez Spirit of Excellence Scholarship honors Jaki Gonzalez's legacy by supporting exceptional Harvard High School seniors pursuing higher education."/>
+  <meta name="keywords" content="Jaki Gonzalez Scholarship, Harvard High School, Spirit of Excellence, scholarship, education, Princeton University"/>
+  <meta name="author" content="The Jaki Gonzalez Spirit of Excellence Scholarship Committee"/>
+  <meta property="og:title" content="The Jaki Gonzalez Spirit of Excellence Scholarship"/>
+  <meta property="og:description" content="Honoring Jaki Gonzalez by supporting Harvard High School seniors who embody excellence, resilience, and learning."/>
+  <meta property="og:image" content="images/fullgrad.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta name="robots" content="index, follow">
+  <title>The Jaki Gonzalez Spirit of Excellence Scholarship</title>
+  <!-- Import Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+  /* Base */
+  body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #fffaf0; /* Soft off-white */
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+ /* ---------- NAVIGATION ribbon ---------- */
+nav {
+  background: #0A2742;             /* navy */
+  padding: 0.8rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  border-bottom: none;
+}
+
+/* Menu button */
+.menu-btn {
+  background: #F4E3C1;             /* beige */
+  color: #0A2742;                  /* navy text */
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+.menu-btn:hover,
+.menu-btn:focus-visible {
+  background: #FFD166;             /* yellow hover */
+  color: #0A2742;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+/* Dropdown menu links */
+.menu-links {
+  display: none;
+  flex-direction: column;
+  background: #F4E3C1;             /* beige dropdown */
+  position: absolute;
+  top: 3.2rem;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.menu-links.show { display: flex; }
+.menu-links a {
+  display: block;
+  padding: 0.9rem 0;
+  text-decoration: none;
+  color: #0A2742;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+.menu-links a:hover {
+  color: #FFD166;
+  background-color: transparent;
+}
+
+/* nav-donate-button */
+.nav-donate-btn {
+  background-color: #F77F00;   /* orange */
+  color: #F9F7F4;              /* white text */
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-left: 0.85rem;        /* space between Menu and Donate */
+  display: inline-block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: background-color .25s ease, transform .15s ease, box-shadow .2s ease;
+}
+.nav-donate-btn:hover,
+.nav-donate-btn:focus-visible {
+  background-color: #FFD166;   /* gold hover */
+  color: #0A2742;              /* navy text */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(230,81,0,0.2);
+  outline: none;
+}
+    
+/* ---------- HEADER ---------- */
+header {
+  position: relative;
+  background: #0A2742;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+header h1,
+header h2 {
+  font-family: 'Noto Serif Georgian', serif;
+  margin: 0;
+  color: #F9F7F4;                  /* off-white text */
+}
+header h1 { font-size: 4.2rem; margin-bottom: 0.3rem; }
+header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
+
+/* Header container: logo + text side by side */
+.header-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* center horizontally */
+  gap: 1rem; /* space between logo and text */
+  text-align: left;
+}
+
+/* Logo size */
+.logo {
+  height: 250px;
+  width: auto;
+}
+
+/* ™ inline (header) */
+.tm-inline {
+  font-size: 0.5em;               /* subscript-sized */
+  vertical-align: sub;            /* subscript alignment */
+  margin-left: 0.25rem;
+  color: #F9F7F4;                 /* off-white */
+  letter-spacing: 0.02em;
+}
+     /* Main Layout*/
+  main {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  .mission-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  .mission-text { flex: 1 1 50%; text-align: left; }
+  .mission-text h2 {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 2.0rem;
+    color: #D4A017; /* Gold */
+    margin-bottom: 1.2rem;
+  }
+  .mission-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+    
+  .mission-image { flex: 1 1 40%; }
+  .mission-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    border: 15px solid #D4A017; /* gold border */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  /* ---------- DONATION PAGE STYLES ---------- */
+.donation-message {
+  font-size: 1.25rem;
+  font-family: 'Noto Serif Georgian', serif;
+  color: #0A2742;
+  background-color: #F4E3C1; /* light beige background for contrast */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+/* Responsive iframe container for donation form */
+.donation-form-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 ratio */
+  height: 0;
+  margin-bottom: 4rem;
+}
+
+.donation-form-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+  /* ---------- FOOTER ---------- */
+footer {
+  background: #0A2742;
+  color: #ffffff;
+  padding: 1.80rem 1rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 2.5rem;
+}
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+footer a {
+  color: #FFD166;
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a:hover { text-decoration: underline; }
+
+/* Footer logo + ™ */
+.footer-logo-container {
+  display: inline-block;
+  position: relative; /* anchor for absolute ™ */
+}
+.footer-logo {
+  height: 250px;
+  width: auto;
+  margin-bottom: 0;
+}
+.tm-footer {
+  position: absolute;
+  right: 8px;           /* near lower-right of logo */
+  bottom: 6px;
+  font-size: 0.6rem;    /* smaller */
+  color: #F9F7F4;       /* off-white to match brand */
+  line-height: 1;
+}
   </style>
 </head>
 <body>
@@ -111,27 +281,42 @@
       <a href="team.html">Meet the Board</a>
       <a href="contact.html">Contact Us</a>
       <a href="applicationresources.html">Application Resources</a>
+      <a href="donate.html">Donate</a>
     </div>
   </nav>
 
   <header>
-    <h1>Donate to the Scholarship</h1>
-    <h2>Honor Jaki’s Legacy<span class="tm-inline">TM</span></h2>
+    <div class="header-center">
+      <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="logo">
+      <div class="header-text">
+        <h1>Jaki Gonzalez</h1>
+        <h2>Spirit of Excellence Scholarship<span class="tm-inline">TM</span></h2>
+      </div>
+    </div>
   </header>
 
   <main>
-    <p class="donation-message">
-      Your donation directly supports Harvard High School students who embody the brilliance, resilience, and excellence Jaki stood for. Every gift helps continue her legacy.
-    </p>
+    <div class="donation-message">
+  <p>
+    Your donation directly empowers exceptional students as they pursue higher education.
+    Every gift—no matter the amount—goes straight into our locally held scholarship fund,
+    which is independently managed by financial professionals to ensure transparency and integrity.
+  </p>
+  <p>
+    As a registered 501(c)(3) nonprofit, all donations are tax-deductible, and you’ll receive a receipt for your records.
+  </p>
+  <p>
+    We are deeply grateful for your generosity. With your support, you're not just giving—you’re creating opportunities
+    and making a lasting impact in the lives of young scholars.
+  </p>
+</div>
 
-    <!-- Embedded Zeffy donation form -->
-    <div style="position:relative;overflow:hidden;height:450px;width:100%;">
-      <iframe title='Donation form powered by Zeffy'
-        style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%'
-        src='https://www.zeffy.com/embed/donation-form/a-legacy-of-excellence'
-        allowpaymentrequest allowTransparency="true">
-      </iframe>
-    </div>
+<div class="donation-form-container">
+  <iframe title='Donation form powered by Zeffy'
+    src='https://www.zeffy.com/embed/donation-form/a-legacy-of-excellence'
+    allowpaymentrequest allowTransparency="true">
+  </iframe>
+</div>
   </main>
 
   <footer>
