@@ -251,88 +251,63 @@ footer a:hover { text-decoration: underline; }
   line-height: 1;
 }
 
-/* ---------- Global fluid elements ---------- */
-img, video { max-width: 100%; height: auto; }
-html { scroll-behavior: smooth; }
+ /* ---------- Global fluid elements ---------- */
+    img, video { max-width: 100%; height: auto; }
+    html { scroll-behavior: smooth; }
 
-/* 1) Fluid base text size (viewport-aware, clamped) */
-html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
+    /* Fluid typography for big titles (keeps header readable across sizes) */
+    .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
+    .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
+    .page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
 
-/* 2) Make key wrappers container-aware (so children scale to their actual width) */
-.header-center, .mission-section, .footer-inner { container-type: inline-size; }
+    /* ---------- Mobile / small tablets ---------- */
+    @media (max-width: 768px) {
+      .header-center {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+      .logo { height: clamp(120px, 24vw, 160px); }
 
-/* 3) Headings scale to container size when supported; otherwise fall back to simple clamps */
-@supports (width: 1cqi) {
-  .header-text h1 { font-size: clamp(1.75rem, 4cqi, 3.75rem); line-height: 1.1; }
-  .header-text h2 { font-size: clamp(1.25rem, 2.6cqi, 2.25rem); line-height: 1.15; }
-  .logo            { inline-size: clamp(120px, 28cqi, 250px); height: auto; }
-}
-@supports not (width: 1cqi) {
-  .header-text h1 { font-size: clamp(2rem, 4.5vw, 3.8rem); }
-  .header-text h2 { font-size: clamp(1.2rem, 2.8vw, 2.2rem); }
-  .logo           { height: clamp(120px, 24vw, 250px); width: auto; }
-}
+      nav { padding: 0.6rem 0.8rem; }
+      .menu-links {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+      }
+      .menu-links a {
+        padding: 0.8rem 0;
+        border-top: 1px solid rgba(10,39,66,0.1);
+      }
 
-/* ---------- Mobile / small tablets ---------- */
-@media (max-width: 768px) {
-  .header-center {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;                     /* more breathing room */
-    max-width: 95%;                /* container a bit wider */
-    margin: 0 auto;
-  }
-  .logo {
-    height: clamp(160px, 32vw, 220px); /* slightly larger logo */
-  }
-  .header-text h1,
-  .header-text h2 {
-    max-width: 95%;                /* headings scale with container */
-    margin: 0 auto;
-  }
+      main { margin: 2rem auto; padding: 0 1rem; }
 
-  nav { padding: 0.6rem 0.8rem; }
-  .menu-links {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    padding: 0;
-  }
-  .menu-links a {
-    padding: 0.8rem 0;
-    border-top: 1px solid rgba(10,39,66,0.1);
-  }
-  main {
-    margin: 2rem auto;
-    padding: 1rem;  
-  }
-  .section { gap: 2.5rem; }         /* tighten spacing slightly */
-  .section .text { padding: 0 0.25rem; }
-  
-  /* Fix image + border alignment */
-  .section img {
-    display: block;
-    margin: 0 auto;
-    border: 15px solid #FFD166;
-    border-radius: 10px;
-    max-width: calc(70% - 27px);    /* make images ~10% smaller */
-    height: auto;
-    box-sizing: border-box;
-  }
+      .section { gap: 1rem; }
+      .section .text { padding: 0 0.25rem; }
 
-  .donate-button {
-    width: 100%;
-    max-width: 200px;
-  }
-  footer { padding: 1.2rem 1rem; }
-  .footer-logo { height: 150px; }   /* slightly bigger footer logo */
-}
+      .section img { border-width: 10px; border-radius: 10px; }
 
-/* ---------- Medium screens ---------- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .logo { height: 180px; }
-  main { padding: 0 1.5rem; }
-}
+      .donate-button { width: 100%; max-width: 340px; }
+
+      footer { padding: 1.2rem 1rem; }
+      .footer-logo { height: 140px; }
+    }
+
+    /* ---------- Medium screens (tablets/landscape) ---------- */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .logo { height: 180px; }
+      main { padding: 0 1.5rem; }
+    }
+     /* Alternate layout on wide screens */
+    @media (min-width: 900px) {
+      .section {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.5rem;
+      }
+      .section:nth-of-type(even) .media { order: 2; }
+      .section:nth-of-type(even) .text  { order: 1; }
+    }
   </style>
 </head>
 <body>
@@ -382,7 +357,7 @@ html { font-size: clamp(16px, 0.5rem + 0.7vi, 18px); }
         <img src="images/JGSES_logo_w_off-white_book-removebg.png" alt="JGSES Logo" class="footer-logo">
         <span class="tm-footer">TM</span>
       </div>
-      <p>A non-profit pending 501(c)(3) charity organization status</p>
+      <p>A non-profit 501(c)(3) charity organization</p>
       <p><a href="mailto:jakigonzalezscholarship@gmail.com">jakigonzalezscholarship@gmail.com</a></p>
       <p>PO Box 104 Harvard, IL 60033-9782</p>
       <p>EIN: 39-3707357</p>
