@@ -209,13 +209,28 @@ header h2 { font-size: 3.2rem; margin-top: 0.5rem; }
   text-align: center;
 }
 
-/* Responsive iframe container for donation form */
 .donation-form-container {
   position: relative;
   overflow: hidden;
-  padding-top: 56.25%; /* 16:9 ratio */
-  height: 0;
+  height: 800px; /* Default height for desktop */
   margin-bottom: 4rem;
+}
+
+.donation-form-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Make it taller on smaller screens */
+@media (max-width: 768px) {
+  .donation-form-container {
+    height: 1100px; /* Gives mobile users more scrolling space */}
 }
 
 .donation-form-container iframe {
