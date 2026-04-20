@@ -172,12 +172,6 @@
   .page-title h2 { font-size: clamp(1.6rem, 5vw, 2.8rem); }
 
   /* Mobile tweaks */
-  @media (max-width: 768px) {
-    .header-center {
-      flex-direction: column;
-      text-align: center;
-      gap: 0.75rem;
-    }
     .logo { height: clamp(120px, 24vw, 160px); }
 
     nav { padding: 0.6rem 0.8rem; }
@@ -195,6 +189,98 @@
     main { margin: 2rem auto; padding: 0 1rem; }
     footer { padding: 1.2rem 1rem; }
     .footer-logo { height: 140px; }
+ /* ==================== RECIPIENTS SECTION ==================== */
+  .recipients-section {
+    margin-top: 3rem;
+  }
+
+  .year-block {
+    margin-top: 2rem;
+  }
+
+  .year-title {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 1.4rem;
+    color: #0A2742;
+    text-align: center;
+    margin: 0 0 1.25rem 0;
+    letter-spacing: 0.03em;
+  }
+
+  /* Mirrors .family-gallery layout */
+  .recipients-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+
+  /* Each card mirrors the family gallery image style */
+  .recipient-card {
+    flex: 1 1 280px;
+    max-width: 360px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 1.25rem;
+  }
+
+  .recipient-photo {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .recipient-name {
+    font-family: 'Noto Serif Georgian', serif;
+    font-size: 1.15rem;
+    color: #D4A017;
+    margin: 0.85rem 0 0.25rem;
+    padding: 0 1rem;
+  }
+
+  .recipient-meta {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0 0 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .recipient-blurb {
+    font-size: 0.92rem;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+    padding: 0 1rem;
+  }
+
+  .board-statement {
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 768px) {
+    .header-center { flex-direction: column; text-align: center; gap: 0.75rem; }
+    .logo { height: clamp(120px, 24vw, 160px); }
+    nav { padding: 0.6rem 0.8rem; }
+    .menu-links { position: static; width: 100%; box-shadow: none; padding: 0; }
+    .menu-links a { padding: 0.8rem 0; border-top: 1px solid rgba(10,39,66,0.1); }
+    main { margin: 2rem auto; padding: 0 1rem; }
+    footer { padding: 1.2rem 1rem; }
+    .footer-logo { height: 140px; }
+    .recipient-photo { height: 260px; }
   }
   </style>
 </head>
@@ -234,23 +320,28 @@
 
   <!-- MAIN -->
   <main>
-    <p class="coming-soon">
-      We’re excited to award our first scholarship in the Spring of 2026!
     </p>
 
-   ==================== RECIPIENT BLOCKS ====================
+      <!-- RECIPIENTS SECTION -->
+    <section class="recipients-section">
+      <h2 class="section-title">Scholarship Recipients</h2>
+      <p class="center">
+        These outstanding students embody the spirit of excellence, resilience, and dedication that Jaki represented. We are proud to support their journey.
+      </p>
 
-    <section class="year-block" id="recipients-2026">
-  <h3 class="year-title">2026 Recipient</h3>
-  <div class="recipients-grid">
-    <article class="recipient-card">
-      <img class="recipient-photo" src="images/2026 REC1.JPEG" alt="Charlene Hernandez">
-      <h4 class="recipient-name">Charlene Hernandez</h4>
-      <p class="recipient-meta">Harvard High School '26 · Aspiring Pediatrician: </p>
-    </article>
-  </div>
-</section>
-    
+      <div class="year-block" id="recipients-2026">
+        <h3 class="year-title">2026 Recipient</h3>
+        <div class="recipients-grid">
+          <article class="recipient-card">
+            <img class="recipient-photo" src="images/2026_REC1.JPEG" alt="Charlene Hernandez">
+            <h4 class="recipient-name">Charlene Hernandez</h4>
+            <p class="recipient-meta">Harvard High School '26 · Intended Major: </p>
+            <p class="recipient-blurb">Short blurb about achievements, leadership, and community impact.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- FOOTER -->
